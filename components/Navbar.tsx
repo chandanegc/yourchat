@@ -2,10 +2,42 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Search, MessageCircle } from 'lucide-react';
+import { Search, MessageCircle, ChevronDown, Facebook, ShoppingBag, Slack, Globe, Instagram } from 'lucide-react';
+
+const integrations = [
+  {
+    name: 'Website',
+    description: 'Connect with your website visitors',
+    icon: Globe,
+    color: 'text-blue-600',
+    bgColor: 'bg-blue-50',
+  },
+  {
+    name: 'WhatsApp',
+    description: 'Instant messaging support',
+    icon: MessageCircle,
+    color: 'text-green-600',
+    bgColor: 'bg-green-50',
+  },
+  {
+    name: 'Facebook',
+    description: 'Engage with Facebook users',
+    icon: Facebook,
+    color: 'text-indigo-600',
+    bgColor: 'bg-indigo-50',
+  },
+  {
+    name: 'Instagram',
+    description: 'Connect with Instagram audience',
+    icon: Instagram,
+    color: 'text-pink-600',
+    bgColor: 'bg-pink-50',
+  },
+];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [isIntegrationsOpen, setIsIntegrationsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -32,18 +64,68 @@ export default function Navbar() {
               Yoursitechat
             </span>
           </div>
+
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-            {['About', 'Services', 'Features', 'How It Works', 'Integrations', 'Security'].map((item, i) => (
-              <Link 
-                key={item}
-                href={item === 'About' ? '/about' : item === 'Services' ? '/services' : '#'} 
-                className="hover:text-indigo-600 transition-colors relative group"
-                style={{ animationDelay: `${i * 100}ms` }}
-              >
-                {item}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-600 transition-all group-hover:w-full"></span>
-              </Link>
-            ))}
+            {['About Us', 'Services', 'How It Works', 'Integrations', 'Security', 'Blog', 'Contact'].map((item, i) => {
+              if (item === 'Integrations') {
+                return (
+                  <div 
+                    key={item}
+                    className="relative py-2"
+                    onMouseEnter={() => setIsIntegrationsOpen(true)}
+                    onMouseLeave={() => setIsIntegrationsOpen(false)}
+                  >
+                    <button className="flex items-center gap-1 hover:text-indigo-600 transition-colors cursor-pointer outline-none">
+                      Integrations <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isIntegrationsOpen ? 'rotate-180' : ''}`} />
+                    </button>
+
+                    <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden transition-all duration-300 transform origin-top ${
+                      isIntegrationsOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
+                    }`}>
+                      <div className="p-4 flex flex-col gap-1">
+                        {integrations.map((integration) => (
+                          <Link
+                            key={integration.name}
+                            href="#"
+                            className="flex items-start gap-4 p-3 rounded-xl hover:bg-slate-50 transition-all group"
+                          >
+                            <div className={`w-10 h-10 rounded-lg ${integration.bgColor} flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-110`}>
+                              <integration.icon className={`w-5 h-5 ${integration.color}`} />
+                            </div>
+                            <div className="flex flex-col">
+                              <span className="text-sm font-bold text-slate-800">{integration.name}</span>
+                              <span className="text-[10px] text-slate-500 leading-tight">{integration.description}</span>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
+              return (
+                <Link 
+                  key={item}
+                  href={
+                    item === 'About Us' ? '/about' : 
+                    item === 'Services' ? '/services' : 
+                    item === 'Features' ? '/feature' : 
+                    item === 'How It Works' ? '/howItwork' : 
+                    item === 'Security' ? '/security' : 
+                    item === 'Blog' ? '/blog' : 
+                    item === 'Contact' ? '/contact' : 
+                    item === 'Support' ? '/support' : 
+                    '#'
+                  } 
+                  className="hover:text-indigo-600 transition-colors relative group"
+                  style={{ animationDelay: `${i * 100}ms` }}
+                >
+                  {item}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-600 transition-all group-hover:w-full"></span>
+                </Link>
+              );
+            })}
           </div>
 
           <div className="flex items-center gap-4">
