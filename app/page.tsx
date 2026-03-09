@@ -28,20 +28,16 @@ export default function LandingPage() {
 
       <Navbar />
 
-      {/* Hero Section */}
       <div className="relative pt-32 pb-20 px-6 overflow-hidden">
-        {/* Background Image Container */}
         <div className="absolute inset-0 z-0 flex items-center justify-center opacity-40">
            <img src="/hero-bg.png" alt="Hero Background" className="w-full h-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-white z-[1]"></div>
         
-        {/* Decorative Elements */}
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-200/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
-          {/* Left Content */}
           <div className="space-y-8 animate-fade-in">
             <h1 className="text-5xl lg:text-5xl font-black leading-tight">
               <span className="text-slate-900">TURN CONVERSATIONS</span>
@@ -67,11 +63,8 @@ export default function LandingPage() {
             </button>
           </div>
 
-          {/* Right Content - Mockup */}
           <div className="relative animate-slide-in-right">
-            {/* Main Phone Mockup */}
             <div className="relative mx-auto w-full max-w-md">
-              {/* Floating Card - Customer Support */}
               <div className="absolute top-10 -left-8 bg-white rounded-2xl shadow-2xl p-4 w-56 animate-float z-20" style={{ animationDelay: '0.5s' }}>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center">
@@ -86,7 +79,6 @@ export default function LandingPage() {
                 </div>
               </div>
 
-              {/* Floating Card - About Company */}
               <div className="absolute bottom-32 -left-12 bg-white rounded-2xl shadow-xl p-3 animate-float" style={{ animationDelay: '1s' }}>
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 bg-gradient-to-br from-indigo-500 to-blue-400 rounded-full"></div>
@@ -95,7 +87,6 @@ export default function LandingPage() {
                 <div className="text-xs font-semibold mt-2 text-slate-900">About the company</div>
               </div>
 
-              {/* Floating Card - Target Audience */}
               <div className="absolute top-40 -right-8 bg-white rounded-2xl shadow-2xl p-4 w-52 animate-float z-20" style={{ animationDelay: '0.3s' }}>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white shadow-sm">
@@ -113,9 +104,7 @@ export default function LandingPage() {
                 </div>
               </div>
 
-              {/* Main Chat Interface */}
               <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500">
-                {/* Chat Header */}
                 <div className="bg-gradient-to-r from-indigo-600 to-blue-500 px-6 py-4 flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
@@ -131,7 +120,6 @@ export default function LandingPage() {
                   </div>
                 </div>
 
-                {/* Chat Body */}
                 <div className="p-6 space-y-4 bg-gradient-to-b from-slate-50 to-white min-h-[400px]">
                   <div className="bg-slate-100 rounded-2xl p-4 inline-block">
                     <div className="text-xs font-semibold text-slate-600 mb-2">Customer Support</div>
@@ -157,7 +145,6 @@ export default function LandingPage() {
                     ))}
                   </div>
 
-                  {/* Input Area */}
                   <div className="absolute bottom-6 left-6 right-6 bg-white rounded-2xl shadow-lg border border-slate-200 p-3 flex items-center gap-3">
                     <button className="text-slate-600 hover:text-indigo-600">
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -185,16 +172,14 @@ export default function LandingPage() {
       <div className="py-10 bg-white/50 backdrop-blur-sm border-y mt-12 border-slate-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-12 items-center justify-items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-700">
-            {/* Stripe */}
             <div className="flex items-center gap-2 group cursor-pointer">
               <div className="h-6 w-auto">
                 <svg viewBox="0 0 635 262" className="h-full fill-slate-500 group-hover:fill-[#635BFF] transition-colors">
-                  <path d="M634.3 118.8c0-11-8.2-16.1-22.1-16.1-14.9 0-25.5 5.5-25.5 5.5l-4.7-16s12-7 32-7c30.2 0 46.1 14.3 46.1 40.5V191h-21.7v-13s-9.3 15.6-31.1 15.6c-21.3 0-36-12.7-36-32.3 0-24.8 23.3-33.1 53-33.1 5.3 0 10.1.3 10.1.3v-10.2zM435.4 71.8l17.8-6.3V40.2l-17.8 6.3V71.8zm0 22.5h17.8V191h-17.8V94.3zM348.4 118.8c0-11-8.2-16.1-22.1-16.1-14.9 0-25.5 5.5-25.5 5.5l-4.7-16s12-7 32-7c30.2 0 46.1 14.3 46.1 40.5V191h-21.7v-13s-9.3 15.6-31.1 15.6c-21.3 0-36-12.7-36-32.3 0-24.8 23.3-33.1 53-33.1 5.3 0 10.1.3 10.1.3v-10.2zM216.5 70.3v24H187v72.5c0 10.8 7.3 15.4 16.5 15.4 7 0 11.5-1.5 11.5-1.5l1.5 15.2s-7 3.5-19.3 3.5c-23.7 0-33.5-14.7-33.5-39.7V94.3h-19.8V71.8l19.8-11.5 6.3-17.8L187 35.2v25.2l29.5 9.9zM103.1 194.5c-16.1 0-28.7-5.5-28.7-5.5l-4.7-16s12-10 32-10c30.2 0 46.1 14.3 46.1 40.5V262h-21.7v-13s-9.3 15.6-31.1 15.6c-21.3 0-36-12.7-36-32.3 0-24.8 23.3-33.1 53-33.1 5.3 0 10.1.3 10.1.3v-5.4zM10.1 94.3h17.8V191H10.1V94.3zm0-22.5l17.8-6.3V40.2l-17.8 6.3V71.8z"/>
+                  <path d="M634.3 118.8c0-11-8.2-16.1-22.1-16.1-14.9 0-25.5 5.5-25.5 5.5l-4.7-16s12-7 32-7c30.2 0 46.1 14.3 46.1 40.5V191h-21.7v-13s-9.3 15.6-31.1 15.6c-21.3 0-36-12.7-36-32.3 0-24.8 23.3-33.1 53-33.1 5.3 0 10.1.3 10.1.3v-10.2zM435.4 71.8l17.8-6.3V40.2l-17.8 6.3V71.8zm0 22.5h17.8V191h-17.8V94.3zM348.4 118.8c0-11-8.2-16.1-22.1-16.1-14.9 0-25.5 5.5-25.5 5.5l-4.7-16s12-7 32-7c30.2 0 46.1 14.3 46.1 40.5V191h-21.7v-13s-9.3 15.6-31.1 15.6c-21.3 0-36-12.7-36-32.3 0-24.8 23.3-33.1 53-33.1 5.3 0 10.1.3 10.1.3v-10.2zM216.5 70.3v24H187v72.5c0 10.8 7.3 15.4 16.5 15.4 7 0 11.5-1.5 11.5-1.5l1.5 15.2s-7 3.5-19.3 3.5c-23.7 0-33.5-14.7-33.5-39.7V94.3h-19.8V71.8l19.8-11.5 6.3-17.8L187 35.2v25.2l29.5 9.9zM103.1 194.5c-16.1 0-28.7-5.5-28.7-5.5l-4.7-16s12-10 32-10c30.2 0 46.1 14.3 46.1 40.5V262h-21.7v-13s-9.3 15.6-31.1 15.6c-21.3 0-36-12.7-36-32.3 0-24.8 23.3-33.1 53-33.1 5.3 0 10.1.3 10.1.3v-10.2zM10.1 94.3h17.8V191H10.1V94.3zm0-22.5l17.8-6.3V40.2l-17.8 6.3V71.8z"/>
                 </svg>
               </div>
               <span className="text-xl font-bold text-slate-500 group-hover:text-slate-900 transition-colors">Stripe</span>
             </div>
-            {/* Airbnb */}
             <div className="flex items-center gap-2 group cursor-pointer">
               <div className="h-6 w-auto">
                 <svg viewBox="0 0 1000 316" className="h-full fill-slate-500 group-hover:fill-red-500 transition-colors">
@@ -203,12 +188,11 @@ export default function LandingPage() {
               </div>
               <span className="text-xl font-bold text-slate-500 group-hover:text-slate-900 transition-colors">Airbnb</span>
             </div>
-            {/* Discord */}
             <div className="flex items-center gap-2 group cursor-pointer">
               <div className="h-6 w-auto">
                 <svg viewBox="0 0 245 240" className="h-full fill-slate-500 group-hover:fill-indigo-500 transition-colors">
                   <path d="M104.4 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zM140.9 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z"/>
-                  <path d="M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2 0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3 0 0-8.5 14.5-30.6 15.2z"/>
+                  <path d="M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.2-.2-.3-.3-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2 0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3 0 0-8.5 14.5-30.6 15.2z"/>
                 </svg>
               </div>
               <span className="text-xl font-bold text-slate-500 group-hover:text-slate-900 transition-colors">Discord</span>
@@ -282,7 +266,6 @@ export default function LandingPage() {
             </div>
           </div>
 
-          {/* Text Side (Right) */}
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 rounded-full text-sm font-medium text-slate-600 border border-slate-200">
               <div className="w-2 h-2 bg-slate-900 rounded-sm"></div>

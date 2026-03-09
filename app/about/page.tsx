@@ -37,7 +37,6 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      
       <AboutHero />
 
       {sections.map((section, i) => (
@@ -47,11 +46,9 @@ export default function AboutPage() {
         />
       ))}
 
-      {/* New Sections from User Image */}
       <AboutFeatures />
       <ImageGallery />
       <HalfDashboard/>
-
       <Footer />
     </div>
   );

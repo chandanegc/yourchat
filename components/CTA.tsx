@@ -4,29 +4,30 @@ import React from 'react';
 
 export default function CTA() {
   return (
-    <section className="py-24 px-6 bg-black pb-32">
-      <div className="max-w-7xl mx-auto">
-        <div className="relative overflow-hidden rounded-[3rem] bg-gradient-to-r from-blue-700 via-indigo-800 to-blue-900 border border-white/10 p-12 md:p-20 text-center space-y-10 group">
-          {/* Ambient Glows */}
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/20 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
-          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-rose-500/10 blur-[120px] rounded-full translate-y-1/2 -translate-x-1/2"></div>
+    <section className="py-24 px-6 bg-black">
+      <div className="max-w-[95%] mx-auto">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 px-12 py-14 text-center">
+          {/* Gradient Overlay Effects */}
+          <div className="absolute top-0 right-0 w-80 h-80 bg-pink-500/30 blur-3xl rounded-full"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-600/40 blur-3xl rounded-full"></div>
           
-          <div className="space-y-6 relative z-10">
-            <h2 className="text-4xl md:text-5xl font-black text-white leading-tight max-w-2xl mx-auto">
+          <div className="relative z-10 space-y-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white leading-snug max-w-3xl mx-auto">
               Enterprise-Ready AI Customer Support That Scales With You
             </h2>
-            <p className="text-blue-100/80 font-medium max-w-2xl mx-auto">
+            
+            <p className="text-blue-100 text-base max-w-2xl mx-auto leading-relaxed px-4">
               Deploy an AI chatbot on your website or app to resolve customer issues instantly, reduce support load, and deliver consistent experiences—without sacrificing control.
             </p>
-          </div>
 
-          <div className="flex flex-wrap justify-center gap-6 relative z-10">
-            <button className="px-10 py-4 bg-white text-blue-800 rounded-xl font-bold hover:scale-105 active:scale-95 transition-all shadow-2xl">
-              Get Started Free
-            </button>
-            <button className="px-10 py-4 bg-white/10 text-white border border-white/20 rounded-xl font-bold hover:bg-white/20 transition-all backdrop-blur-sm">
-              Book a Demo
-            </button>
+            <div className="flex flex-wrap justify-center gap-4 pt-2">
+              <button className="px-7 py-3 bg-white text-blue-900 rounded-lg font-semibold hover:bg-blue-50 transition-all text-sm">
+                Get Started Free
+              </button>
+              <button className="px-7 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-all text-sm">
+                Book a Demo
+              </button>
+            </div>
           </div>
         </div>
       </div>
