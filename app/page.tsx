@@ -1,16 +1,19 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { Search, MessageCircle, Target, Users } from 'lucide-react';
+import React from 'react';
+import { Search, MessageCircle, Target, Users, CheckCircle2, ArrowDown, Mail, Star, ChevronDown, ArrowRight } from 'lucide-react';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import HowItWorks from '@/components/HowItWorks';
+import Pricing from '@/components/Pricing';
+import Testimonials from '@/components/Testimonials';
+import Contact from '@/components/Contact';
+import FAQ from '@/components/FAQ';
+import CTA from '@/components/CTA';
+import Services from '@/components/Services';
+import Showcase from '@/components/Showcase';
 
 export default function LandingPage() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []); 
 
   return (
     <div className="min-h-screen bg-white">
@@ -23,46 +26,7 @@ export default function LandingPage() {
         </button>
       </div>
 
-      {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        scrolled ? 'bg-white/80 backdrop-blur-xl shadow-lg' : 'bg-transparent'
-      }`}>
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2 group cursor-pointer">
-              <div className="w-10 h-10 bg-gradient-to-br from-indigo-600 to-blue-500 rounded-xl flex items-center justify-center transform transition-transform group-hover:rotate-6">
-                <MessageCircle className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
-                Yoursitechat
-              </span>
-            </div>
-            
-            <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-              {['Features', 'About Us', 'How It Works', 'Integrations', 'Security'].map((item, i) => (
-                <a 
-                  key={item}
-                  href="#" 
-                  className="hover:text-indigo-600 transition-colors relative group"
-                  style={{ animationDelay: `${i * 100}ms` }}
-                >
-                  {item}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-600 transition-all group-hover:w-full"></span>
-                </a>
-              ))}
-            </div>
-
-            <div className="flex items-center gap-4">
-              <button className="hidden md:block p-2 hover:bg-slate-100 rounded-lg transition-colors">
-                <Search className="w-5 h-5 text-slate-600" />
-              </button>
-              <button className="px-6 py-2.5 bg-gradient-to-r from-indigo-600 to-blue-500 text-white rounded-xl font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300">
-                Get Started
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <div className="relative pt-32 pb-20 px-6 overflow-hidden">
@@ -218,7 +182,7 @@ export default function LandingPage() {
         </div>
       </div>
 
-      <div className="py-16 bg-white/50 backdrop-blur-sm border-y border-slate-100">
+      <div className="py-10 bg-white/50 backdrop-blur-sm border-y mt-12 border-slate-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-12 items-center justify-items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-700">
             {/* Stripe */}
@@ -271,6 +235,200 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
+      
+      {/* Feature Detail Section */}
+      <section className="py-24 px-6 overflow-visible">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+          {/* Visual Side (Left) */}
+          <div className="relative">
+            {/* Main Abstract Image */}
+            <div className="relative w-[85%] aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl bg-slate-100">
+              <img 
+                src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80" 
+                alt="Abstract background"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Overlapping Secondary Image */}
+            <div className="absolute -bottom-12 right-0 w-[55%] aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white z-10 bg-slate-50">
+              <img 
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80" 
+                alt="Person working"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Stats Cards */}
+            <div className="absolute top-20 right-[5%] z-20 space-y-4">
+              {/* Messages Automated Card */}
+              <div className="bg-[#1a1a1a] text-white p-6 rounded-3xl shadow-2xl w-48 transform -rotate-3 transition-transform hover:rotate-0">
+                <div className="text-3xl font-bold mb-1">10M+</div>
+                <div className="text-sm text-slate-400 leading-tight">Messages<br />Automated</div>
+              </div>
+
+              {/* Happy Customers Card */}
+              <div className="bg-[#1D63FF] text-white p-6 rounded-3xl shadow-2xl w-48 transform rotate-3 transition-transform hover:rotate-0">
+                <div className="text-3xl font-bold mb-1">1.2K+</div>
+                <div className="text-sm text-blue-100 leading-tight">Happy<br />customers</div>
+              </div>
+            </div>
+
+            {/* Decorative Dots/Patterns */}
+            <div className="absolute -bottom-16 left-12 grid grid-cols-4 gap-2 opacity-20">
+              {[...Array(16)].map((_, i) => (
+                <div key={i} className="w-2 h-2 bg-slate-900 rounded-full"></div>
+              ))}
+            </div>
+          </div>
+
+          {/* Text Side (Right) */}
+          <div className="space-y-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 rounded-full text-sm font-medium text-slate-600 border border-slate-200">
+              <div className="w-2 h-2 bg-slate-900 rounded-sm"></div>
+              Your AI-powered conversation engine
+            </div>
+
+            <h2 className="text-5xl font-black text-slate-900 leading-[1.15]">
+              Defining the Future of AI-Driven Conversations
+            </h2>
+
+            <p className="text-lg text-slate-600 max-w-lg leading-relaxed font-medium opacity-90">
+              Transform how your business communicates with customers using AI-powered chatbots built for WhatsApp. 
+              YourSiteChat helps you respond instantly, automate support, and convert conversations into revenue — 24/7.
+            </p>
+
+            <ul className="space-y-5">
+              {[
+                "Instant AI replies with human-like responses",
+                "Seamless handoff from bot to human agents",
+                "Designed to increase engagement and conversions"
+              ].map((feature, i) => (
+                <li key={i} className="flex items-center gap-3 text-slate-700 font-semibold text-base">
+                  <div className="w-6 h-6 bg-blue-100/50 rounded-full flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                  </div>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+
+            <button className="flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-700 via-indigo-600 to-rose-500 text-white rounded-2xl font-bold text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 group">
+              Scroll For Features
+              <ArrowDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Resource Grid Section */}
+      <section className="py-24 px-6 bg-slate-50/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Card 1: AI Playbook */}
+            <div className="group relative aspect-[3/4] rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              <div className="absolute inset-0 bg-[#e5e1da]">
+                <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?w=400&q=80" alt="Playbook" className="w-full h-full object-cover opacity-60 mix-blend-multiply" />
+              </div>
+              <div className="relative p-8 h-full flex flex-col justify-start">
+                <span className="text-[10px] font-bold tracking-[0.2em] text-slate-900 mb-4 opacity-70">AI PLAYBOOK</span>
+                <h3 className="text-2xl font-bold text-slate-900 leading-tight mb-2">From Chatbots to AI Agents</h3>
+                <p className="text-sm text-slate-700 leading-relaxed font-medium">How autonomous AI is reshaping customer support and service operations.</p>
+              </div>
+            </div>
+
+            {/* Card 2: Trends */}
+            <div className="group relative aspect-[3/4] rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              <div className="absolute inset-0 bg-black">
+                <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=400&q=80" alt="Trends" className="w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 transition-all duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              </div>
+              <div className="relative p-8 h-full flex flex-col justify-start">
+                <span className="text-[10px] font-bold tracking-[0.2em] text-white/70 mb-4">TRENDS</span>
+                <h3 className="text-2xl font-bold text-white leading-tight mb-2">From Chatbots to AI Agents</h3>
+                <p className="text-sm text-white/80 leading-relaxed font-medium">How autonomous AI is reshaping customer support and service operations.</p>
+              </div>
+            </div>
+
+            {/* Card 3: Trends (Secondary) */}
+            <div className="group relative aspect-[3/4] rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              <div className="absolute inset-0 bg-[#f5f5f5]">
+                <img src="https://images.unsplash.com/photo-1620121692029-d088224efc74?w=400&q=80" alt="Trends 2" className="w-full h-full object-cover opacity-40 mix-blend-multiply" />
+              </div>
+              <div className="relative p-8 h-full flex flex-col justify-start">
+                <span className="text-[10px] font-bold tracking-[0.1em] text-slate-900 mb-4 opacity-70">TRENDS</span>
+                <h3 className="text-2xl font-bold text-slate-900 leading-tight mb-2">Top Conversational AI Trends</h3>
+                <p className="text-sm text-slate-700 leading-relaxed font-medium">What's next for website and in-app customer support experiences.</p>
+              </div>
+            </div>
+
+            {/* Card 4: Insights */}
+            <div className="group relative aspect-[3/4] rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              <div className="absolute inset-0 bg-slate-900">
+                <img src="https://images.unsplash.com/photo-1557683316-973673baf926?w=400&q=80" alt="Insights" className="w-full h-full object-cover opacity-50 transition-transform duration-700 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-transparent"></div>
+              </div>
+              <div className="relative p-8 h-full flex flex-col justify-start">
+                <span className="text-[10px] font-bold tracking-[0.2em] text-white/70 mb-4">INSIGHTS</span>
+                <h3 className="text-2xl font-bold text-white leading-tight mb-2">AI, Privacy & Trust</h3>
+                <p className="text-sm text-white/80 leading-relaxed font-medium text-pretty">How to build secure, compliant AI-powered support conversations.</p>
+              </div>
+            </div>
+
+            {/* Card 5: Guides */}
+            <div className="group relative aspect-[3/4] rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              <div className="absolute inset-0 bg-slate-800">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&q=80" alt="Guides" className="w-full h-full object-cover opacity-40" />
+                <div className="absolute inset-0 bg-black/20"></div>
+              </div>
+              <div className="relative p-8 h-full flex flex-col justify-start">
+                <span className="text-[10px] font-bold tracking-[0.2em] text-white/70 mb-4">GUIDES</span>
+                <h3 className="text-2xl font-bold text-white leading-tight mb-2">The Automation Advantage</h3>
+                <p className="text-sm text-white/80 leading-relaxed font-medium">Why support teams using AI chat scale faster with fewer resources.</p>
+              </div>
+            </div>
+
+            {/* Card 6: Guides (Yellow) */}
+            <div className="group relative aspect-[3/4] rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-[#FFD700]">
+              <div className="relative p-8 h-full flex flex-col justify-start">
+                <span className="text-[10px] font-bold tracking-[0.2em] text-slate-900/70 mb-4">GUIDES</span>
+                <h3 className="text-2xl font-bold text-slate-900 leading-tight mb-2">Human + AI Collaboration</h3>
+                <p className="text-sm text-slate-900/80 leading-relaxed font-medium">Designing chat experiences that feel helpful—not robotic.</p>
+              </div>
+            </div>
+
+            {/* Card 7: Product */}
+            <div className="group relative aspect-[3/4] rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              <div className="absolute inset-0 bg-slate-200">
+                <img src="https://images.unsplash.com/photo-1542332213-31f87348057f?w=400&q=80" alt="Product" className="w-full h-full object-cover opacity-40 mix-blend-multiply" />
+              </div>
+              <div className="relative p-8 h-full flex flex-col justify-start">
+                <span className="text-[10px] font-bold tracking-[0.2em] text-slate-900 mb-4 opacity-70">PRODUCT</span>
+                <h3 className="text-2xl font-bold text-slate-900 leading-tight mb-2">What's New in YourSiteChat</h3>
+                <p className="text-sm text-slate-700 leading-relaxed font-medium">Latest updates to our AI-powered customer support chatbot for web and apps.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Services />
+
+      <HowItWorks />
+
+      <Showcase />
+
+      <Pricing />
+
+      <Testimonials />
+
+      <Contact />
+
+      <FAQ />
+
+      <CTA />
+
+      <Footer />
 
       <style jsx>{`
         @keyframes fade-in {
