@@ -178,7 +178,7 @@ export default function FeaturesPage() {
       number: "1",
       title: "Add the Chatbot",
       description: "Integrate the AI chatbot into your website or app with a simple script or SDK.",
-      icon: <Bot className="w-6 h-6" />,
+      icon: <div className="w-6 h-6 overflow-hidden"><img src="/chat.png" alt="Chat" className="w-full h-full object-contain" /></div>,
       color: "from-purple-500 to-purple-600"
     },
     {
@@ -201,7 +201,7 @@ export default function FeaturesPage() {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50">
       <Navbar />
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 overflow-hidden">
+      <section className="relative pt-20 pb-20 px-4 overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 bg-gradient-to-br from-purple-100/50 via-blue-50/30 to-pink-100/50"></div>
         <div className="absolute inset-0" style={{

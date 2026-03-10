@@ -17,22 +17,12 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Floating Chat Button */}
-      <div className="fixed bottom-6 right-6 z-[60] animate-bounce-subtle">
-        <button className="w-14 h-14 bg-white rounded-full shadow-2xl border border-slate-100 flex items-center justify-center group hover:scale-110 transition-transform cursor-pointer">
-          <div className="w-10 h-10 bg-gradient-to-br from-indigo-600 to-blue-500 rounded-full flex items-center justify-center">
-            <MessageCircle className="w-5 h-5 text-white" />
-          </div>
-        </button>
-      </div>
-
       <Navbar />
 
-      <div className="relative pt-32 pb-20 px-6 overflow-hidden">
-        <div className="absolute inset-0 z-0 flex items-center justify-center opacity-40">
-           <img src="/hero-bg.png" alt="Hero Background" className="w-full h-full object-cover" />
+      <div className="relative min-h-[calc(100vh-80px)] flex items-center pt-12 pb-20 px-6 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="/landing.png" alt="Hero Background" className="w-full h-full object-cover object-[1%_top] scale-105 animate-fade-in" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-white z-[1]"></div>
         
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-200/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
@@ -63,7 +53,7 @@ export default function LandingPage() {
             </button>
           </div>
 
-          <div className="relative animate-slide-in-right">
+          <div className="relative animate-slide-in-right lg:pr-50">
             <div className="relative mx-auto w-full max-w-md">
               <div className="absolute top-10 -left-8 bg-white rounded-2xl shadow-2xl p-4 w-56 animate-float z-20" style={{ animationDelay: '0.5s' }}>
                 <div className="flex items-center gap-3">
@@ -103,12 +93,12 @@ export default function LandingPage() {
                   <Target className="w-4 h-4 text-red-500" />
                 </div>
               </div>
-
-              <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500">
+              {/* //chat */}
+              <div className="relative  bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500">
                 <div className="bg-gradient-to-r from-indigo-600 to-blue-500 px-6 py-4 flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                      <MessageCircle className="w-5 h-5 text-indigo-600" />
+                    <div className="w-10 h-10 flex items-center justify-center overflow-hidden">
+                      <img src="/chat.png" alt="Chat" className="w-full h-full object-contain" />
                     </div>
                     <div className="text-white">
                       <div className="font-semibold text-sm">Yoursitechat</div>

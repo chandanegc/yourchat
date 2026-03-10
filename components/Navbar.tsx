@@ -11,6 +11,7 @@ const integrations = [
     icon: Globe,
     color: 'text-blue-600',
     bgColor: 'bg-blue-50',
+    href: '/integration/website',
   },
   {
     name: 'WhatsApp',
@@ -18,6 +19,7 @@ const integrations = [
     icon: MessageCircle,
     color: 'text-green-600',
     bgColor: 'bg-green-50',
+    href: '/integration/whatsapp',
   },
   {
     name: 'Facebook',
@@ -25,6 +27,7 @@ const integrations = [
     icon: Facebook,
     color: 'text-indigo-600',
     bgColor: 'bg-indigo-50',
+    href: '/integration/facebook',
   },
   {
     name: 'Instagram',
@@ -32,6 +35,7 @@ const integrations = [
     icon: Instagram,
     color: 'text-pink-600',
     bgColor: 'bg-pink-50',
+    href: '/integration/instagram',
   },
 ];
 
@@ -46,17 +50,16 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-      scrolled ? 'bg-white/80 backdrop-blur-xl shadow-lg' : 'bg-transparent'
+    <nav className={`sticky top-0 w-full z-50 transition-all duration-500 ${
+      scrolled ? 'bg-white/80 backdrop-blur-xl shadow-lg' : 'bg-white border-b border-slate-50'
     }`}>
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2 group cursor-pointer">
             <div className="flex items-center">
-              <div className="w-8 h-8 relative">
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-full opacity-80 blur-[2px]"></div>
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center shadow-lg transform group-hover:rotate-6 transition-transform">
-                  <MessageCircle className="w-5 h-5 text-white" />
+              <div className="w-10 h-10 relative">
+                <div className="absolute inset-0 flex items-center justify-center transform group-hover:rotate-6 transition-transform overflow-hidden">
+                  <img src="/chat.png" alt="Logo" className="w-full h-full object-contain" />
                 </div>
               </div>
             </div>
@@ -86,7 +89,7 @@ export default function Navbar() {
                         {integrations.map((integration) => (
                           <Link
                             key={integration.name}
-                            href="#"
+                            href={integration.href}
                             className="flex items-start gap-4 p-3 rounded-xl hover:bg-slate-50 transition-all group"
                           >
                             <div className={`w-10 h-10 rounded-lg ${integration.bgColor} flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-110`}>

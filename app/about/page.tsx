@@ -3,52 +3,56 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import AboutHero from '@/components/AboutHero';
-import FeatureSection from '@/components/FeatureSection';
-import AboutFeatures from '@/components/AboutFeatures';
-import ImageGallery from '@/components/ImageGallery';
+import Services from '@/components/Services';
+import Contact from '@/components/Contact';
+import Culture from '@/components/Culture';
+import CoreValues from '@/components/CoreValues';
+import Benefits from '@/components/Benefits';
+import Showcase from '@/components/Showcase';
+import HowItWorks from '@/components/HowItWorks';
 import HalfDashboard from '@/components/HalfDashboard';
 
 export default function AboutPage() {
-  const sections = [
-    {
-      title: "Feature Title Goes Here",
-      description: "This paragraph is used to explain the feature or service in a little more detail. Describe what it helps with, how it fits into the overall product, or what kind of problem it addresses. This text is intentionally generic and can be replaced once the feature details are finalized.",
-      points: ["Benefit three of this feature", "Benefit three of this feature", "Benefit three of this feature"],
-      imageSrc: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80",
-      reverse: false
-    },
-    {
-      title: "Feature Title Goes Here",
-      description: "This paragraph is used to explain the feature or service in a little more detail. Describe what it helps with, how it fits into the overall product, or what kind of problem it addresses. This text is intentionally generic and can be replaced once the feature details are finalized.",
-      points: ["Benefit three of this feature", "Benefit three of this feature", "Benefit three of this feature"],
-      imageSrc: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&q=80",
-      reverse: true
-    },
-    {
-      title: "Feature Title Goes Here",
-      description: "This paragraph is used to explain the feature or service in a little more detail. Describe what it helps with, how it fits into the overall product, or what kind of problem it addresses. This text is intentionally generic and can be replaced once the feature details are finalized.",
-      points: ["Benefit three of this feature", "Benefit three of this feature", "Benefit three of this feature"],
-      imageSrc: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=800&q=80",
-      reverse: false
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      <AboutHero />
+      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&q=80" 
+            alt="Business Collaboration" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
 
-      {sections.map((section, i) => (
-        <FeatureSection 
-          key={i}
-          {...section}
-        />
-      ))}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+          <div className="space-y-2">
+            <h1 className="text-4xl md:text-7xl font-black text-white tracking-tighter uppercase leading-none">
+              TURN CONVERSATIONS
+            </h1>
+            <h1 className="text-4xl md:text-7xl font-black text-white tracking-tighter uppercase leading-none">
+              INTO CONVERSIONS
+            </h1>
+            
+            <div className="relative inline-block mt-6">
+              <div className="absolute inset-0 bg-[#CCFF00] transform -skew-x-12"></div>
+              <p className="relative z-10 text-black text-xl md:text-3xl font-black px-6 py-2 tracking-tight uppercase">
+                AUTOMATICALLY. THOUGHTFULLY. AT SCALE.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <AboutFeatures />
-      <ImageGallery />
+      <Culture/>
+      <CoreValues/>
+      <Benefits/>
+      <Services />
+      <HowItWorks/>
+      <Showcase/>
       <HalfDashboard/>
+      <Contact />
       <Footer />
     </div>
   );

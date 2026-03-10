@@ -54,7 +54,7 @@ export default function CustomerSupportSolution() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-40 pb-24 px-6 bg-gradient-to-br from-blue-600 via-indigo-700 to-slate-900 relative overflow-hidden">
+      <section className="pt-20 pb-24 px-6 bg-gradient-to-br from-blue-600 via-indigo-700 to-slate-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <svg className="w-full h-full" viewBox="0 0 100 100">
              <defs>
@@ -96,8 +96,8 @@ export default function CustomerSupportSolution() {
             <div className="relative bg-white/10 backdrop-blur-xl rounded-[2.5rem] border border-white/20 p-8 shadow-2xl scale-105">
                 <div className="space-y-6">
                    <div className="flex items-center gap-4 border-b border-white/10 pb-6">
-                      <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center shadow-lg">
-                         <MessageCircle className="w-6 h-6 text-white" />
+                      <div className="w-14 h-14 flex items-center justify-center overflow-hidden">
+                         <img src="/chat.png" alt="Chat" className="w-full h-full object-contain" />
                       </div>
                       <div>
                          <p className="text-white font-bold">AI Assistant</p>

@@ -66,7 +66,7 @@ export default function PricingPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-40 pb-20 px-6 text-center bg-gradient-to-b from-gray-50 to-white">
+      <section className="pt-20 pb-20 px-6 text-center bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full border border-blue-100 text-blue-600 mb-4">
             <span className="text-sm font-bold uppercase tracking-wider">Pricing Plans</span>

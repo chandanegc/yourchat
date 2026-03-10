@@ -200,7 +200,9 @@ export default function SupportPage() {
                 <p className="text-blue-100 font-medium">Join our community or start a live chat right now.</p>
               </div>
               <button className="px-8 py-4 bg-white text-blue-600 rounded-2xl font-bold shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center gap-2">
-                <MessageCircle className="w-5 h-5" />
+                <div className="w-8 h-8 overflow-hidden">
+                  <img src="/chat.png" alt="Chat" className="w-full h-full object-contain" />
+                </div>
                 Start Live Chat
               </button>
             </div>
