@@ -2,27 +2,27 @@
 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, CSSProperties } from "react";
 
 const API_BASE = "https://sandybrown-trout-566594.hostingersite.com/wp-json/wp/v2";
 const POSTS_PER_PAGE = 6;
 
-function stripHtml(html = "") {
+function stripHtml(html: string = "") {
   return html.replace(/<[^>]*>/g, "").replace(/&[a-z]+;/gi, " ").trim();
 }
 
-function formatDate(dateStr) {
+function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString("en-US", {
     year: "numeric", month: "short", day: "numeric",
   });
 }
 
-function readTime(content = "") {
+function readTime(content: string = "") {
   const words = stripHtml(content).split(/\s+/).length;
   return `${Math.max(1, Math.ceil(words / 200))} min read`;
 }
 
-function getCategoryColor(index) {
+function getCategoryColor(index: number) {
   const colors = [
     { bg: "#e0f2fe", text: "#0369a1", dot: "#0ea5e9" },
     { bg: "#f0fdf4", text: "#15803d", dot: "#22c55e" },
@@ -53,7 +53,7 @@ function SkeletonCard() {
 }
 
 // ─── Post Card ───────────────────────────────────────────────────────────────
-function PostCard({ post, catColors }) {
+function PostCard({ post, catColors }: any) {
   const [hovered, setHovered] = useState(false);
   const category = post._embedded?.["wp:term"]?.[0]?.[0];
   const color = catColors[category?.id] || getCategoryColor(0);
@@ -131,7 +131,7 @@ function PostCard({ post, catColors }) {
 }
 
 // ─── Featured Post ───────────────────────────────────────────────────────────
-function FeaturedPost({ post }) {
+function FeaturedPost({ post }: any) {
   const [hovered, setHovered] = useState(false);
   const thumb = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
   const category = post._embedded?.["wp:term"]?.[0]?.[0];
@@ -198,7 +198,7 @@ function FeaturedPost({ post }) {
 }
 
 // ─── Pagination ──────────────────────────────────────────────────────────────
-function Pagination({ currentPage, totalPages, onPageChange }) {
+function Pagination({ currentPage, totalPages, onPageChange }: any) {
   const pages = [];
   const range = 2;
   for (let i = Math.max(1, currentPage - range); i <= Math.min(totalPages, currentPage + range); i++) {
@@ -222,7 +222,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
         </>
       )}
 
-      {pages.map(p => (
+      {pages.map((p: any) => (
         <button
           key={p}
           onClick={() => onPageChange(p)}
@@ -252,10 +252,10 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
 
 // ─── Main App ────────────────────────────────────────────────────────────────
 export default function BlogPage() {
-  const [posts, setPosts] = useState([]);
-  const [categories, setCategories] = useState([]);
-  const [catColors, setCatColors] = useState({});
-  const [selectedCat, setSelectedCat] = useState(null); // null = All
+  const [posts, setPosts] = useState<any[]>([]);
+  const [categories, setCategories] = useState<any[]>([]);
+  const [catColors, setCatColors] = useState<any>({});
+  const [selectedCat, setSelectedCat] = useState<any>(null); // null = All
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [totalPosts, setTotalPosts] = useState(0);
@@ -270,8 +270,8 @@ export default function BlogPage() {
       .then(data => {
         if (Array.isArray(data)) {
           setCategories(data);
-          const colorMap = {};
-          data.forEach((cat, i) => { colorMap[cat.id] = getCategoryColor(i); });
+          const colorMap: any = {};
+          data.forEach((cat: any, i: number) => { colorMap[cat.id] = getCategoryColor(i); });
           setCatColors(colorMap);
         }
       })
@@ -304,14 +304,14 @@ export default function BlogPage() {
   useEffect(() => { fetchPosts(); }, [fetchPosts]);
 
   // Reset page on filter change
-  const handleCatChange = (catId) => {
+  const handleCatChange = (catId: any) => {
     setSelectedCat(catId);
     setPage(1);
     setSearch("");
     setSearchInput("");
   };
 
-  const handleSearch = (e) => {
+  const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     setSearch(searchInput);
     setPage(1);
@@ -350,7 +350,7 @@ export default function BlogPage() {
               </svg>
               <input
                 value={searchInput}
-                onChange={e => setSearchInput(e.target.value)}
+                onChange={(e: any) => setSearchInput(e.target.value)}
                 placeholder="Search articles…"
                 style={styles.searchInput}
               />
@@ -373,7 +373,7 @@ export default function BlogPage() {
               All Posts
               <span style={styles.filterCount}>{totalPosts || ""}</span>
             </button>
-            {categories.map((cat, i) => {
+            {categories.map((cat: any, i: number) => {
               const color = getCategoryColor(i);
               return (
                 <button
@@ -466,7 +466,7 @@ export default function BlogPage() {
           <Pagination
             currentPage={page}
             totalPages={totalPages}
-            onPageChange={(p) => { setPage(p); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+            onPageChange={(p: number) => { setPage(p); window.scrollTo({ top: 0, behavior: "smooth" }); }}
           />
         )}
 
@@ -483,7 +483,7 @@ export default function BlogPage() {
 }
 
 // ─── Styles ──────────────────────────────────────────────────────────────────
-const styles = {
+const styles: Record<string, CSSProperties> = {
   page: {
     minHeight: "100vh",
     background: "#fafafa",
