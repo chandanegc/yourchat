@@ -55,7 +55,7 @@ export default function Navbar() {
     }`}>
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2 group cursor-pointer">
+          <Link href="/" className="flex items-center gap-2 group cursor-pointer">
             <div className="flex items-center">
               <div className="w-10 h-10 relative">
                 <div className="absolute inset-0 flex items-center justify-center transform group-hover:rotate-6 transition-transform overflow-hidden">
@@ -66,7 +66,7 @@ export default function Navbar() {
             <span className="text-xl font-bold tracking-tight text-slate-800">
               Yoursitechat
             </span>
-          </div>
+          </Link>
 
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
             {['About Us', 'Services', 'How It Works', 'Integrations', 'Security', 'Blog', 'Contact'].map((item, i) => {
@@ -135,9 +135,9 @@ export default function Navbar() {
             <button className="hidden md:block p-2 hover:bg-slate-100 rounded-lg transition-colors">
               <Search className="w-5 h-5 text-slate-600" />
             </button>
-            <button className="px-6 py-2.5 bg-gradient-to-r from-indigo-600 to-blue-500 text-white rounded-xl font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300">
+            <Link href="/form" className="px-6 py-2.5 bg-gradient-to-r from-indigo-600 to-blue-500 text-white rounded-xl font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300">
               Get Started
-            </button>
+            </Link>
           </div>
         </div>
       </div>

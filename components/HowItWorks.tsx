@@ -45,9 +45,9 @@ export default function HowItWorks() {
         </div>
 
         <div className="flex justify-center pt-8">
-          <button className="px-10 py-4 bg-gradient-to-r from-blue-700 to-rose-400 text-white rounded-2xl font-bold text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl">
+          <a href="https://www.youtube.com/watch?v=hXjR8C3rRoA" target="_blank" rel="noopener noreferrer" className="px-10 py-4 bg-gradient-to-r from-blue-700 to-rose-400 text-white rounded-2xl font-bold text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl inline-block">
             Request a Demo
-          </button>
+          </a>
         </div>
       </div>
     </section>

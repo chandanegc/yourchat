@@ -233,9 +233,9 @@ export default function FeaturesPage() {
                 Get Started Today
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="bg-white hover:bg-gray-50 border-2 border-gray-200 text-gray-700 px-8 py-4 rounded-full font-semibold transition-all shadow-md">
+              <a href="https://www.youtube.com/watch?v=hXjR8C3rRoA" target="_blank" rel="noopener noreferrer" className="bg-white hover:bg-gray-50 border-2 border-gray-200 text-gray-700 px-8 py-4 rounded-full font-semibold transition-all shadow-md inline-block">
                 Request a Demo
-              </button>
+              </a>
             </div>
           </div>
 
@@ -417,10 +417,10 @@ export default function FeaturesPage() {
           </div>
 
           <div className="text-center mt-12">
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-full font-semibold transition-all inline-flex items-center gap-2 shadow-lg shadow-purple-500/30">
+            <a href="https://www.youtube.com/watch?v=hXjR8C3rRoA" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-full font-semibold transition-all inline-flex items-center gap-2 shadow-lg shadow-purple-500/30">
               Request a Demo
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -510,9 +510,9 @@ export default function FeaturesPage() {
                   Get Started Free
                   <ArrowRight className="w-5 h-5" />
                 </button>
-                <button className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold transition-all">
+                <a href="https://www.youtube.com/watch?v=hXjR8C3rRoA" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold transition-all inline-block">
                   Book a Demo
-                </button>
+                </a>
               </div>
             </div>
           </div>

@@ -75,9 +75,9 @@ export default function EcommerceSolution() {
                  <button className="px-12 py-6 bg-slate-900 text-white rounded-2xl font-black shadow-2xl transition-all hover:scale-105 active:scale-95 flex items-center gap-3">
                    Scale My Store <ArrowRight className="w-6 h-6 text-blue-600" />
                  </button>
-                 <button className="px-12 py-6 bg-white text-slate-900 border-2 border-slate-100 rounded-2xl font-black transition-all hover:bg-slate-50">
+                 <a href="https://www.youtube.com/watch?v=hXjR8C3rRoA" target="_blank" rel="noopener noreferrer" className="px-12 py-6 bg-white text-slate-900 border-2 border-slate-100 rounded-2xl font-black transition-all hover:bg-slate-50 inline-flex items-center justify-center">
                    Watch Demo Video
-                 </button>
+                 </a>
               </div>
               
               <div className="pt-10 flex items-center gap-8 border-t border-slate-100">

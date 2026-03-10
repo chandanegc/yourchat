@@ -85,9 +85,9 @@ export default function CustomerSupportSolution() {
                <button className="px-10 py-5 bg-white text-blue-900 rounded-2xl font-black shadow-2xl transition-all hover:scale-105 active:scale-95 flex items-center gap-3">
                  Get Started Free <ArrowRight className="w-5 h-5 text-blue-600" />
                </button>
-               <button className="px-10 py-5 bg-white/10 text-white border border-white/20 rounded-2xl font-black backdrop-blur-md transition-all hover:bg-white/20">
+               <a href="https://www.youtube.com/watch?v=hXjR8C3rRoA" target="_blank" rel="noopener noreferrer" className="px-10 py-5 bg-white/10 text-white border border-white/20 rounded-2xl font-black backdrop-blur-md transition-all hover:bg-white/20 inline-block">
                  Watch Demo
-               </button>
+               </a>
             </div>
           </div>
           

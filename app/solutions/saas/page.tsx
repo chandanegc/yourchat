@@ -79,9 +79,9 @@ export default function SaasSolution() {
              <button className="px-12 py-6 bg-white text-slate-900 rounded-2xl font-black shadow-2xl transition-all hover:scale-110 active:scale-95 flex items-center gap-3">
                Start For Free <ArrowRight className="w-6 h-6 text-blue-600" />
              </button>
-             <button className="px-12 py-6 bg-white/5 text-white border border-white/20 rounded-2xl font-black backdrop-blur-md transition-all hover:bg-white/10 hover:border-white/40">
+             <a href="https://www.youtube.com/watch?v=hXjR8C3rRoA" target="_blank" rel="noopener noreferrer" className="px-12 py-6 bg-white/5 text-white border border-white/20 rounded-2xl font-black backdrop-blur-md transition-all hover:bg-white/10 hover:border-white/40 inline-flex items-center justify-center">
                Book Founder Demo
-             </button>
+             </a>
           </div>
           
           <div className="pt-16 grid grid-cols-2 md:grid-cols-4 gap-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-700">

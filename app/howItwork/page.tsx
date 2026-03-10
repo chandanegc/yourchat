@@ -242,13 +242,15 @@ export default function HowItWorksPage() {
               Start Free Trial 
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link 
-              href="/demo" 
+            <a 
+              href="https://www.youtube.com/watch?v=hXjR8C3rRoA"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group bg-white text-gray-700 px-8 py-4 rounded-xl font-semibold border-2 border-gray-200 hover:border-purple-300 hover:shadow-lg transition-all inline-flex items-center gap-2"
             >
               <Play className="w-5 h-5" />
               Watch Demo
-            </Link>
+            </a>
           </div>
 
           {/* Trust indicators */}

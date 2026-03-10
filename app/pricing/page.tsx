@@ -169,9 +169,9 @@ export default function PricingPage() {
             <button className="px-8 py-4 bg-white text-slate-900 rounded-2xl font-bold shadow-xl transition-all hover:scale-105 active:scale-95">
               Chat With Expert
             </button>
-            <button className="px-8 py-4 bg-white/10 text-white border border-white/20 rounded-2xl font-bold backdrop-blur-md transition-all hover:bg-white/20">
+            <a href="https://www.youtube.com/watch?v=hXjR8C3rRoA" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white/10 text-white border border-white/20 rounded-2xl font-bold backdrop-blur-md transition-all hover:bg-white/20 inline-block">
               Schedule a Demo
-            </button>
+            </a>
           </div>
         </div>
       </section>

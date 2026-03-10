@@ -1,6 +1,7 @@
 "use client";
 
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 import { useState, useEffect, useCallback } from "react";
 
 const API_BASE = "https://sandybrown-trout-566594.hostingersite.com/wp-json/wp/v2";
@@ -322,6 +323,7 @@ export default function BlogPage() {
 
   return (
     <div style={styles.page}>
+      <Navbar />
       {/* ── Google Font ── */}
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');

@@ -81,9 +81,9 @@ export default function EnterpriseSolution() {
               </p>
 
               <div className="flex flex-wrap gap-8 pt-6">
-                 <button className="px-12 py-6 bg-blue-600 text-white rounded-2xl font-black shadow-2xl transition-all hover:scale-105 active:scale-95 flex items-center gap-3">
+                 <a href="https://www.youtube.com/watch?v=hXjR8C3rRoA" target="_blank" rel="noopener noreferrer" className="px-12 py-6 bg-blue-600 text-white rounded-2xl font-black shadow-2xl transition-all hover:scale-105 active:scale-95 flex items-center gap-3 w-fit">
                    Request Custom Demo <ArrowRight className="w-6 h-6" />
-                 </button>
+                 </a>
                  <button className="px-12 py-6 bg-white/5 text-white border border-white/20 rounded-2xl font-black backdrop-blur-md transition-all hover:bg-white/10">
                    Contact Sales Team
                  </button>

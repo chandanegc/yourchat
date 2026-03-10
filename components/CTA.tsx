@@ -24,9 +24,9 @@ export default function CTA() {
               <button className="px-7 py-3 bg-white text-blue-900 rounded-lg font-semibold hover:bg-blue-50 transition-all text-sm">
                 Get Started Free
               </button>
-              <button className="px-7 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-all text-sm">
+              <a href="https://www.youtube.com/watch?v=hXjR8C3rRoA" target="_blank" rel="noopener noreferrer" className="px-7 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-all text-sm inline-block">
                 Book a Demo
-              </button>
+              </a>
             </div>
           </div>
         </div>
