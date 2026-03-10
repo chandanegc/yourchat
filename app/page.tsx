@@ -21,7 +21,7 @@ export default function LandingPage() {
 
       <div className="relative min-h-[calc(100vh-80px)] flex items-center pt-12 pb-20 px-6 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="/landing.png" alt="Hero Background" className="w-full h-full object-cover object-[1%_top] scale-105 animate-fade-in" />
+          <img src="/landing.png" alt="Hero Background" className="w-full h-full object-cover object-[100%_top] scale-115 animate-fade-in" />
         </div>
         
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl animate-pulse"></div>
