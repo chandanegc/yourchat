@@ -4,6 +4,9 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Contact from '@/components/Contact';
+import Testimonials from '@/components/Testimonials';
+import CTA from '@/components/CTA';
+import FAQ from '@/components/FAQ';
 
 export default function ContactPage() {
   return (
@@ -39,6 +42,8 @@ export default function ContactPage() {
       </section>
 
       <Contact />
+      <FAQ/>
+      <CTA/>
       <Footer />
     </div>
   );

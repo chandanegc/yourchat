@@ -20,6 +20,7 @@ import {
   Settings,
   Smartphone
 } from 'lucide-react';
+import Contact from '@/components/Contact';
 
 const benefits = [
   {
@@ -123,7 +124,7 @@ export default function CustomerSupportSolution() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-32 px-6 max-w-7xl mx-auto">
+      <section className="py-20 px-6 max-w-7xl mx-auto">
         <div className="text-center space-y-4 mb-20 px-2 leading-relaxed">
            <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tight">Support that <span className="text-blue-600 underline decoration-blue-100 underline-offset-8 decoration-8">never sleeps</span></h2>
            <p className="text-xl text-slate-500 font-medium max-w-2xl mx-auto">Proven features designed to reduce churn and boost customer lifetime value.</p>
@@ -201,7 +202,7 @@ export default function CustomerSupportSolution() {
            </div>
         </div>
       </section>
-
+      <Contact/>
       <Footer />
     </div>
   );

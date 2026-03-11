@@ -5,7 +5,7 @@ import { Mail } from 'lucide-react';
 
 export default function Services() {
   return (
-    <section className="py-24 px-6 bg-blue-50/30">
+    <section className=" px-6 bg-blue-50/30">
       <div className="max-w-7xl mx-auto space-y-16">
         <div className="text-center space-y-4">
           <h2 className="text-5xl font-black text-slate-900">Our Other Services</h2>

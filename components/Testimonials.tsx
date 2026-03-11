@@ -2,6 +2,11 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Star, Quote } from 'lucide-react';
+import { Syne } from 'next/font/google';
+import { DM_Sans } from 'next/font/google';
+
+const syne = Syne({ subsets: ['latin'], weight: ['700', '800'] });
+const dmSans = DM_Sans({ subsets: ['latin'], weight: ['400', '500', '600'] });
 
 const testimonials = [
   {
@@ -94,27 +99,20 @@ function TestimonialCard({ t }: { t: typeof testimonials[0] }) {
         borderColor: t.highlight ? `${accentColor}55` : undefined,
       }}
     >
-      {/* Quote icon */}
-      <div
-        className="absolute top-5 right-5 opacity-10"
-        style={{ color: accentColor }}
-      >
+      <div className="absolute top-5 right-5 opacity-10" style={{ color: accentColor }}>
         <Quote className="w-10 h-10 fill-current" />
       </div>
 
-      {/* Stars */}
       <div className="flex gap-0.5 mb-4">
         {[...Array(5)].map((_, i) => (
           <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
         ))}
       </div>
 
-      {/* Text */}
-      <p className="text-slate-600 text-sm leading-relaxed mb-5 font-medium">
+      <p className={`${dmSans.className} text-slate-600 text-sm leading-relaxed mb-5 font-medium`}>
         "{t.text}"
       </p>
 
-      {/* Author */}
       <div className="flex items-center gap-3 pt-4 border-t border-slate-100">
         <img
           src={t.img}
@@ -123,8 +121,8 @@ function TestimonialCard({ t }: { t: typeof testimonials[0] }) {
           style={{ boxShadow: `0 0 0 2px ${accentColor}44` }}
         />
         <div>
-          <p className="text-sm font-bold text-slate-900">{t.name}</p>
-          <p className="text-xs text-slate-400">
+          <p className={`${dmSans.className} text-sm font-bold text-slate-900`}>{t.name}</p>
+          <p className={`${dmSans.className} text-xs text-slate-400`}>
             {t.role} ·{' '}
             <span className="font-semibold" style={{ color: accentColor }}>
               {t.company}
@@ -172,19 +170,20 @@ export default function Testimonials() {
   return (
     <section className="py-24 bg-gradient-to-b from-slate-50 to-white overflow-hidden">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap');
-        .testimonials-section { font-family: 'DM Sans', sans-serif; }
-        .testimonials-heading { font-family: 'Syne', sans-serif; }
-        .fade-left { mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%); }
+        .fade-left {
+          mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+          -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+        }
       `}</style>
-      <div className="testimonials-section max-w-7xl mx-auto px-6 mb-14 text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-600 text-xs font-semibold mb-5 tracking-wide uppercase">
+
+      <div className="max-w-7xl mx-auto px-6 mb-14 text-center">
+        <div className={`${dmSans.className} inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-600 text-xs font-semibold mb-5 tracking-wide uppercase`}>
           ✦ Real Stories
         </div>
-        <h2 className="testimonials-heading text-5xl font-extrabold text-slate-900 leading-tight mb-4">
+        <h2 className={`${syne.className} text-5xl font-extrabold text-slate-900 leading-tight mb-4`}>
           Loved by <span className="bg-gradient-to-r from-indigo-500 to-violet-500 bg-clip-text text-transparent">10,000+</span> professionals
         </h2>
-        <p className="text-slate-500 text-lg max-w-xl mx-auto">
+        <p className={`${dmSans.className} text-slate-500 text-lg max-w-xl mx-auto`}>
           From first job seekers to senior engineers — people find their next chapter here.
         </p>
       </div>
@@ -194,7 +193,6 @@ export default function Testimonials() {
         <MarqueeRow items={row2} reverse />
       </div>
 
-      {/* Stats bar */}
       <div className="max-w-4xl mx-auto mt-16 px-6">
         <div className="grid grid-cols-3 divide-x divide-slate-100 bg-white rounded-2xl shadow-sm border border-slate-100 py-6 px-4">
           {[
@@ -203,8 +201,8 @@ export default function Testimonials() {
             { value: "72hrs", label: "Avg. Time to Offer" },
           ].map((stat, i) => (
             <div key={i} className="text-center px-4">
-              <p className="testimonials-heading text-3xl font-extrabold text-slate-900">{stat.value}</p>
-              <p className="text-slate-500 text-sm mt-1 font-medium">{stat.label}</p>
+              <p className={`${syne.className} text-3xl font-extrabold text-slate-900`}>{stat.value}</p>
+              <p className={`${dmSans.className} text-slate-500 text-sm mt-1 font-medium`}>{stat.label}</p>
             </div>
           ))}
         </div>
