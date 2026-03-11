@@ -180,7 +180,7 @@ export default function Testimonials() {
         <div className={`${dmSans.className} inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-600 text-xs font-semibold mb-5 tracking-wide uppercase`}>
           ✦ Real Stories
         </div>
-        <h2 className={`${syne.className} text-5xl font-extrabold text-slate-900 leading-tight mb-4`}>
+        <h2 className={`${syne.className} text-5xl font-bold text-slate-900 mb-4`}>
           Loved by <span className="bg-gradient-to-r from-indigo-500 to-violet-500 bg-clip-text text-transparent">10,000+</span> professionals
         </h2>
         <p className={`${dmSans.className} text-slate-500 text-lg max-w-xl mx-auto`}>
@@ -201,7 +201,7 @@ export default function Testimonials() {
             { value: "72hrs", label: "Avg. Time to Offer" },
           ].map((stat, i) => (
             <div key={i} className="text-center px-4">
-              <p className={`${syne.className} text-3xl font-extrabold text-slate-900`}>{stat.value}</p>
+              <p className={`${syne.className} text-3xl font-bold-100 text-slate-900`}>{stat.value}</p>
               <p className={`${dmSans.className} text-slate-500 text-sm mt-1 font-medium`}>{stat.label}</p>
             </div>
           ))}

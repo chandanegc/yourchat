@@ -5,7 +5,7 @@ import { MessageCircle, Twitter, Instagram, Facebook, Linkedin, Github, ArrowRig
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white pt-24 pb-12 px-6 border-t border-white/10">
+    <footer className="bg-black text-white pt-20 pb-12 px-6 border-t border-white/10">
       <div className="max-w-7xl mx-auto space-y-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Column 1: Brand */}

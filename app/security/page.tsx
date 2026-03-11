@@ -240,7 +240,7 @@ export default function SecurityPage() {
     <div className="min-h-screen bg-white">
       <Navbar />
       {/* Hero Section */}
-      <section className="relative pt-20 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative py-20 pb-40 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50"></div>
         <div className="absolute inset-0 opacity-30" style={{
@@ -364,7 +364,7 @@ export default function SecurityPage() {
       </section>
 
       {/* Compliance & Certifications */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className=" px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
