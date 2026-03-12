@@ -102,8 +102,16 @@ const company = [
     icon: Phone,
     color: 'text-green-600',
     bgColor: 'bg-green-50',
-    href: '/contact',
+    href: '/solutions/customer-support',
   },
+  {
+    name:"Privacy Policy",
+    description:"How we collect, use, and protect your data",
+    icon:Shield,
+    color:"text-blue-600",
+    bgColor:"bg-blue-50",
+    href:"/privacy"
+  }
 ];
 
 const explore = [

@@ -193,20 +193,31 @@ export default function Testimonials() {
         <MarqueeRow items={row2} reverse />
       </div>
 
-      <div className="max-w-4xl mx-auto mt-16 px-6">
-        <div className="grid grid-cols-3 divide-x divide-slate-100 bg-white rounded-2xl shadow-sm border border-slate-100 py-6 px-4">
-          {[
-            { value: "10K+", label: "Jobs Placed" },
-            { value: "4.9★", label: "Average Rating" },
-            { value: "72hrs", label: "Avg. Time to Offer" },
-          ].map((stat, i) => (
-            <div key={i} className="text-center px-4">
-              <p className={`${syne.className} text-3xl font-bold-100 text-slate-900`}>{stat.value}</p>
-              <p className={`${dmSans.className} text-slate-500 text-sm mt-1 font-medium`}>{stat.label}</p>
-            </div>
-          ))}
+     <div className="max-w-3xl mx-auto mt-16 px-6">
+  <div className="relative">
+    <div className="absolute -inset-1 bg-gradient-to-r from-indigo-100 via-blue-50 to-violet-100 rounded-3xl blur-xl opacity-70" />
+    <div className="relative grid grid-cols-3 bg-white rounded-2xl shadow-lg border border-slate-100/80 overflow-hidden">
+      {[
+        { value: "10K+", label: "Jobs Placed", accent: "#6366f1", bg: "from-indigo-50/60 to-white" },
+        { value: "4.9★", label: "Average Rating", accent: "#f59e0b", bg: "from-amber-50/60 to-white" },
+        { value: "72hrs", label: "Avg. Time to Offer", accent: "#10b981", bg: "from-emerald-50/60 to-white" },
+      ].map((stat, i) => (
+        <div
+          key={i}
+          className={`relative flex flex-col items-center justify-center py-8 px-6 bg-gradient-to-b ${stat.bg} group hover:brightness-[0.97] transition-all duration-200 ${i !== 0 ? 'border-l border-slate-100' : ''}`}
+        >
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-10 h-[3px] rounded-full transition-all duration-300 group-hover:w-16" style={{ background: stat.accent }} />
+          <p className={`${syne.className} text-4xl tracking-tight`} style={{ color: stat.accent }}>
+            {stat.value}
+          </p>
+          <p className={`${dmSans.className} text-slate-500 text-sm mt-2 font-medium tracking-wide uppercase`}>
+            {stat.label}
+          </p>
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+</div>
     </section>
   );
 }
