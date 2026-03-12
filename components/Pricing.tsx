@@ -14,7 +14,7 @@ export default function Pricing() {
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-center">
           {/* Free Trial Card */}
-          <div className="bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col space-y-8 h-full">
+          <div className="bg-white animate-float p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col space-y-8 h-full">
             <div className="space-y-4">
               <h4 className="text-2xl font-bold text-slate-900">Free Trial</h4>
               <div className="flex items-baseline gap-1">
@@ -43,7 +43,7 @@ export default function Pricing() {
           </div>
 
           {/* Starter Card (Highlighted) */}
-          <div className="relative bg-gradient-to-b from-blue-600 to-indigo-800 p-10 rounded-[2.5rem] shadow-2xl flex flex-col space-y-8 text-white transform scale-105 z-10 h-full">
+          <div className="relative animate-float bg-gradient-to-b from-blue-600 to-indigo-800 p-10 rounded-[2.5rem] shadow-2xl flex flex-col space-y-8 text-white transform scale-105 z-10 h-full">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-1 bg-white text-blue-600 text-xs font-bold rounded-full shadow-md whitespace-nowrap">
               Most Popular
             </div>
