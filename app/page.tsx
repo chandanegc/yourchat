@@ -21,158 +21,171 @@ export default function LandingPage() {
       <Navbar />
       <div className="h-[10px] w-full shrink-0" aria-hidden="true" />
       {/* Hero Section */}
-      <div className="relative lg:bg-[#F9A834] min-h-[calc(100vh-80px)] flex items-center pt-12  px-4 sm:px-6 overflow-hidden">
+      <div className="relative lg:bg-[#F9A834] min-h-[calc(100vh-80px)]  pt-12  px-4 sm:px-6 overflow-hidden">
+
         <div className="absolute inset-0 z-0">
-          <img src="/landing.png" alt="Hero Background" className="w-full lg:h-full h-[50%]  lg:translate-x-[8%] object-cover object-[100%_top] scale-100 animate-fade-in" />
+          <img src="/landing.png" alt="Hero Background" className="w-full lg:h-full h-[50%]   object-cover object-[100%_top] scale-100 animate-fade-in" />
         </div>
+        {/* //description */}
+        <div className="relative space-y-6 px-10 sm:space-y-8 animate-fade-in text-center lg:text-left">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-black leading-tight">
+            <span className="text-slate-900">TURN CONVERSATIONS</span>
+            <br />
+            <span className="text-slate-900">INTO CONVERSIONS</span>
+            <br />
 
-        <div className="absolute top-20 left-10 w-48 sm:w-72 h-48 sm:h-72 bg-blue-200/30 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-64 sm:w-96 h-64 sm:h-96 bg-indigo-200/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          </h1>
+          <span className="relative -mt-5 sm:text-5xl inline-block -rotate-8 py-1">
+            <span className="absolute inset-0 bg-yellow-400 -skew-x-12 border border-black"></span>
+            <span className="relative z-10 text-slate-900 px-2 sm:px-3">
+              AUTOMATICALLY
+            </span>
 
-        <div className="lg:w-[70%] lg:mx-30  grid lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
-          <div className="space-y-6 -ml-10 sm:space-y-8 animate-fade-in text-center lg:text-left">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-black leading-tight">
-              <span className="text-slate-900">TURN CONVERSATIONS</span>
-              <br />
-              <span className="text-slate-900">INTO CONVERSIONS</span>
-              <br />
-              <span className="relative inline-block">
-                <span className="relative z-10 text-slate-900 px-2 sm:px-3">AUTOMATICALLY</span>
-                <span className="absolute inset-0 bg-yellow-400 transform -skew-x-12"></span>
-              </span>
-            </h1>
+          </span>
 
-            <p className="text-base sm:text-lg text-slate-600 max-w-lg mx-auto lg:mx-0 leading-relaxed px-4 lg:px-0">
-              Engage customers instantly on WhatsApp with AI-powered chatbots that sell, support,
-              and scale your business 24/7.
-            </p>
+          <div className='w-full flex   justify-center lg:justify-start'  >
+            <div className='w-full py-5  lg:w-[50%]'>
+              <p className="text-base sm:text-lg text-slate-600 max-w-lg mx-auto lg:mx-0 leading-relaxed px-4 lg:px-0">
+                Engage customers instantly on WhatsApp <br /> with AI-powered chatbots that sell, support, <br />
+                and scale your business 24/7.
+              </p>
 
-            <Link href="/form" className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-indigo-600 to-blue-500 text-white rounded-2xl font-bold text-base sm:text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3 w-fit mx-auto lg:mx-0">
-              Get Started Today
-              <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </Link>
-          </div>
-
-          <div className="relative animate-slide-in-right lg:pr-0 px-4 sm:px-6 lg:px-0 mt-8 lg:mt-0">
-            <div className="relative mx-auto w-full max-w-md">
-              {/* Floating Card 1 - Top Left: AI Chatbot - Green accent */}
-              <div className="hidden sm:block absolute top-10 -left-4 md:-left-50 bg-white rounded-2xl shadow-2xl p-3 md:p-4 w-52 md:w-60 animate-float z-20 border border-slate-100">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-emerald-50 rounded-xl flex items-center justify-center shrink-0">
-                    <MessageCircle className="w-5 h-5 md:w-6 md:h-6 text-emerald-500" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="text-xs md:text-sm font-bold text-slate-800">AI Chatbot</div>
-                    <div className="text-[10px] text-slate-400 mb-1.5">Response Rate</div>
-                    <div className="w-full bg-slate-100 rounded-full h-1.5">
-                      <div className="bg-emerald-400 h-1.5 rounded-full w-[82%]"></div>
+              <Link href="/form" className="group mt-5 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-indigo-600 to-blue-500 text-white rounded-2xl font-bold text-base sm:text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3 w-fit mx-auto lg:mx-0">
+                Get Started Today
+                <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+            </div>
+            <div className="relative -ml-40 animate-slide-in-right lg:pr-0 px-4 sm:px-6 lg:px-0  lg:-mt-20">
+              <div className="relative mx-auto w-full max-w-md">
+                {/* Floating Card 1 - Top Left: AI Chatbot - Green accent */}
+                <div className="hidden sm:block absolute top-10 -right-4 md:-right-30 bg-white rounded-2xl shadow-2xl p-3 md:p-4 w-52 md:w-60 animate-float z-20 border border-slate-100">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-emerald-50 rounded-xl flex items-center justify-center shrink-0">
+                      <MessageCircle className="w-5 h-5 md:w-6 md:h-6 text-emerald-500" />
                     </div>
-                    <div className="text-[10px] text-emerald-500 font-semibold mt-0.5">82% efficiency</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating Card 2 - Bottom Left: Customer Support - Blue accent */}
-              <div className="hidden sm:block absolute top-100 -left-4 md:-left-50 bg-white rounded-2xl shadow-2xl p-3 md:p-4 w-52 md:w-60 animate-float z-20 border border-slate-100" style={{ animationDelay: '1s' }}>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-50 rounded-xl flex items-center justify-center shrink-0">
-                    <svg className="w-5 h-5 md:w-6 md:h-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                    </svg>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="text-xs md:text-sm font-bold text-slate-800">Customer Support</div>
-                    <div className="text-[10px] text-slate-400 mb-1.5">Tickets Resolved</div>
-                    <div className="w-full bg-slate-100 rounded-full h-1.5">
-                      <div className="bg-blue-400 h-1.5 rounded-full w-[95%]"></div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-xs md:text-sm font-bold text-slate-800">AI Chatbot</div>
+                      <div className="text-[10px] text-slate-400 mb-1.5">Response Rate</div>
+                      <div className="w-full bg-slate-100 rounded-full h-1.5">
+                        <div className="bg-emerald-400 h-1.5 rounded-full w-[82%]"></div>
+                      </div>
+                      <div className="text-[10px] text-emerald-500 font-semibold mt-0.5">82% efficiency</div>
                     </div>
-                    <div className="text-[10px] text-blue-500 font-semibold mt-0.5">95% resolved today</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating Card 3 - Top Right: Target Audience - Purple accent */}
-              <div className="hidden sm:block absolute -top-25 -right-4 md:-right-8 bg-white rounded-2xl shadow-2xl p-3 md:p-4 w-52 md:w-60 animate-float z-20 border border-slate-100" style={{ animationDelay: '2s' }}>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-violet-50 rounded-xl flex items-center justify-center shrink-0">
-                    <Target className="w-5 h-5 md:w-6 md:h-6 text-violet-500" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="text-xs md:text-sm font-bold text-slate-800">Target Audience</div>
-                    <div className="text-[10px] text-slate-400 mb-1.5">Conversion Rate</div>
-                    <div className="w-full bg-slate-100 rounded-full h-1.5">
-                      <div className="bg-violet-400 h-1.5 rounded-full w-[68%]"></div>
-                    </div>
-                    <div className="text-[10px] text-violet-500 font-semibold mt-0.5">+68% conversions</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Chat Widget */}
-              <div className="relative bg-transparent -ml-20 w-100 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500">
-                <div className="bg-gradient-to-r from-indigo-600 to-blue-500 px-4 sm:px-6 py-2 sm:py-2 flex items-center justify-between">
-                  <div className="flex items-center gap-2 sm:gap-3">
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center overflow-hidden">
-                      <img src="/chat.png" alt="Chat" className="w-full h-full object-contain" />
-                    </div>
-                    <div className="text-white">
-                      <div className="font-semibold text-xs sm:text-sm">Yoursitechat</div>
-                      <div className="text-[10px] sm:text-xs opacity-90">Smart AI Assistant</div>
-                    </div>
-                  </div>
-                  <div className="flex gap-2 sm:gap-3 text-white">
-                    <button className="hover:bg-white/20 p-1 rounded text-sm sm:text-base">✕</button>
                   </div>
                 </div>
 
-                <div className="p-4 sm:p-6 space-y-3 sm:space-y-4 bg-[#657e8f4b] from-slate-50 to-white min-h-[300px] sm:min-h-[400px] " >
-                  {/* <div className="bg-slate-100 rounded-2xl p-3 sm:p-4 inline-block">
+                {/* Floating Card 2 - Bottom Left: Customer Support - Blue accent */}
+                <div className="hidden sm:block absolute top-100 -left-4 md:-left-70  bg-white rounded-2xl shadow-2xl p-3 md:p-4 w-52 md:w-60 animate-float z-20 border border-slate-100" style={{ animationDelay: '1s' }}>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-50 rounded-xl flex items-center justify-center shrink-0">
+                      <svg className="w-5 h-5 md:w-6 md:h-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                      </svg>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-xs md:text-sm font-bold text-slate-800">Customer Support</div>
+                      <div className="text-[10px] text-slate-400 mb-1.5">Tickets Resolved</div>
+                      <div className="w-full bg-slate-100 rounded-full h-1.5">
+                        <div className="bg-blue-400 h-1.5 rounded-full w-[95%]"></div>
+                      </div>
+                      <div className="text-[10px] text-blue-500 font-semibold mt-0.5">95% resolved today</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Floating Card 3 - Top Right: Target Audience - Purple accent */}
+                <div className="hidden sm:block absolute top-80 -right-100 md:-right-100  bg-white rounded-2xl shadow-2xl p-3 md:p-4 w-52 md:w-60 animate-float z-20 border border-slate-100" style={{ animationDelay: '2s' }}>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-violet-50 rounded-xl flex items-center justify-center shrink-0">
+                      <Target className="w-5 h-5 md:w-6 md:h-6 text-violet-500" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-xs md:text-sm font-bold text-slate-800">Target Audience</div>
+                      <div className="text-[10px] text-slate-400 mb-1.5">Conversion Rate</div>
+                      <div className="w-full bg-slate-100 rounded-full h-1.5">
+                        <div className="bg-violet-400 h-1.5 rounded-full w-[68%]"></div>
+                      </div>
+                      <div className="text-[10px] text-violet-500 font-semibold mt-0.5">+68% conversions</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Chat Widget */}
+                <div className="relative bg-transparent -ml-20 w-100 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500">
+                  <div className="bg-gradient-to-r from-indigo-600 to-blue-500 px-4 sm:px-6 py-2 sm:py-2 flex items-center justify-between">
+                    <div className="flex items-center gap-2 sm:gap-3">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center overflow-hidden">
+                        <img src="/chat.png" alt="Chat" className="w-full h-full object-contain" />
+                      </div>
+                      <div className="text-white">
+                        <div className="font-semibold text-xs sm:text-sm">Yoursitechat</div>
+                        <div className="text-[10px] sm:text-xs opacity-90">Smart AI Assistant</div>
+                      </div>
+                    </div>
+                    <div className="flex gap-2 sm:gap-3 text-white">
+                      <button className="hover:bg-white/20 p-1 rounded text-sm sm:text-base">✕</button>
+                    </div>
+                  </div>
+
+                  <div className="p-4 sm:p-6 space-y-3 sm:space-y-4 bg-[#657e8f4b] from-slate-50 to-white min-h-[300px] sm:min-h-[400px] " >
+                    {/* <div className="bg-slate-100 rounded-2xl p-3 sm:p-4 inline-block">
                     <div className="text-[10px] sm:text-xs font-semibold text-slate-600">Customer Support</div>
                   </div> */}
 
-                  <div className="space-y-2 mt-10">
-                    <div className="text-xs sm:text-sm font-semibold text-slate-700 mb-2 sm:mb-3">
-                      Suggestions on what to ask Our AI
+                    <div className="space-y-2 mt-10">
+                      <div className="text-xs sm:text-sm font-semibold text-slate-700 mb-2 sm:mb-3">
+                        Suggestions on what to ask Our AI
+                      </div>
+
+                      {[
+                        'What can I ask you?',
+                        'Which one of services is performing the best?',
+                        'What service should I be considering about right now?'
+                      ].map((question, i) => (
+                        <div
+                          key={i}
+                          className="bg-gradient-to-r from-indigo-600 to-blue-500 text-white rounded-xl sm:rounded-2xl px-1 sm:px-2 py-1 sm:py-2 text-xs sm:text-sm hover:shadow-lg transition-shadow cursor-pointer animate-slide-up"
+                          style={{ animationDelay: `${i * 0.1}s` }}
+                        >
+                          {question}
+                        </div>
+                      ))}
                     </div>
 
-                    {[
-                      'What can I ask you?',
-                      'Which one of services is performing the best?',
-                      'What service should I be considering about right now?'
-                    ].map((question, i) => (
-                      <div
-                        key={i}
-                        className="bg-gradient-to-r from-indigo-600 to-blue-500 text-white rounded-xl sm:rounded-2xl px-1 sm:px-2 py-1 sm:py-2 text-xs sm:text-sm hover:shadow-lg transition-shadow cursor-pointer animate-slide-up"
-                        style={{ animationDelay: `${i * 0.1}s` }}
-                      >
-                        {question}
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 bg-[#657e8f4b] rounded-xl sm:rounded-2xl shadow-lg border border-slate-200 p-2 sm:p-3 flex items-center gap-2 sm:gap-3">
-                    <button className="text-white hover:text-indigo-600">
-                      <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
-                      </svg>
-                    </button>
-                    <input
-                      type="text"
-                      placeholder="Ask me anything..."
-                      className="flex-1 outline-none text-xs sm:text-sm text-slate-600 placeholder:text-white"
-                    />
-                    <button className="text-indigo-600 hover:text-indigo-700 z-10">
-                      <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="white" viewBox="0 0 20 20">
-                        <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
-                      </svg>
-                    </button>
+                    <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 bg-[#657e8f4b] rounded-xl sm:rounded-2xl shadow-lg border border-slate-200 p-2 sm:p-3 flex items-center gap-2 sm:gap-3">
+                      <button className="text-white hover:text-indigo-600">
+                        <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                        </svg>
+                      </button>
+                      <input
+                        type="text"
+                        placeholder="Ask me anything..."
+                        className="flex-1 outline-none text-xs sm:text-sm text-slate-600 placeholder:text-white"
+                      />
+                      <button className="text-indigo-600 hover:text-indigo-700 z-10">
+                        <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="white" viewBox="0 0 20 20">
+                          <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="absolute top-20 left-10 w-48 sm:w-72 h-48 sm:h-72 bg-blue-200/30 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-64 sm:w-96 h-64 sm:h-96 bg-indigo-200/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+
+
+        <div className="lg:w-[70%] lg:mx-30  grid lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
+
+
+
         </div>
       </div>
 
