@@ -57,7 +57,7 @@ export default function LandingPage() {
 
               <Link
                 href="/form"
-                className="group mt-5 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-indigo-600 to-blue-500 text-white rounded-2xl font-bold text-base sm:text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3 w-fit mx-auto lg:mx-0"
+                className="group mt-5 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 text-white rounded-none font-bold text-base sm:text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3 w-fit mx-auto lg:mx-0"
               >
                 Get Started Today
                 <svg
@@ -78,10 +78,10 @@ export default function LandingPage() {
             <div className="relative -ml-40 animate-slide-in-right lg:pr-0 px-4 sm:px-6 lg:px-0  lg:-mt-20">
               <div className="relative mx-auto w-full max-w-md">
                 {/* Floating Card 1 - Top Left: AI Chatbot - Green accent */}
-                <div className="hidden sm:block absolute top-10 -right-4 md:-right-30 bg-white rounded-2xl shadow-2xl p-3 md:p-4 w-52 md:w-60 animate-float z-20 border border-slate-100">
+                <div className="hidden sm:block absolute top-10 -right-4 md:-right-30 bg-white rounded-2xl shadow-2xl py-2 px-3 md:py-2.5 md:px-4 w-52 md:w-60 animate-float z-20 border border-slate-100">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 md:w-12 md:h-12 bg-emerald-50 rounded-xl flex items-center justify-center shrink-0">
-                      <MessageCircle className="w-5 h-5 md:w-6 md:h-6 text-emerald-500" />
+                    <div className="w-8 h-8 md:w-10 md:h-10 bg-emerald-50 rounded-xl flex items-center justify-center shrink-0">
+                      <MessageCircle className="w-4 h-4 md:w-5 md:h-5 text-emerald-500" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="text-xs md:text-sm font-bold text-slate-800">
@@ -102,13 +102,13 @@ export default function LandingPage() {
 
                 {/* Floating Card 2 - Bottom Left: Customer Support - Blue accent */}
                 <div
-                  className="hidden sm:block absolute top-100 -left-4 md:-left-70  bg-white rounded-2xl shadow-2xl p-3 md:p-4 w-52 md:w-60 animate-float z-20 border border-slate-100"
+                  className="hidden sm:block absolute top-100 -left-4 md:-left-70  bg-white rounded-2xl shadow-2xl py-2 px-3 md:py-2.5 md:px-4 w-52 md:w-60 animate-float z-20 border border-slate-100"
                   style={{ animationDelay: "1s" }}
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-50 rounded-xl flex items-center justify-center shrink-0">
+                    <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-50 rounded-xl flex items-center justify-center shrink-0">
                       <svg
-                        className="w-5 h-5 md:w-6 md:h-6 text-blue-500"
+                        className="w-4 h-4 md:w-5 md:h-5 text-blue-500"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -140,12 +140,12 @@ export default function LandingPage() {
 
                 {/* Floating Card 3 - Top Right: Target Audience - Purple accent */}
                 <div
-                  className="hidden sm:block absolute top-80 -right-100 md:-right-100  bg-white rounded-2xl shadow-2xl p-3 md:p-4 w-52 md:w-60 animate-float z-20 border border-slate-100"
+                  className="hidden sm:block absolute top-80 -right-100 md:-right-100  bg-white rounded-2xl shadow-2xl py-2 px-3 md:py-2.5 md:px-4 w-52 md:w-60 animate-float z-20 border border-slate-100"
                   style={{ animationDelay: "2s" }}
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 md:w-12 md:h-12 bg-violet-50 rounded-xl flex items-center justify-center shrink-0">
-                      <Target className="w-5 h-5 md:w-6 md:h-6 text-red-500" />
+                    <div className="w-8 h-8 md:w-10 md:h-10 bg-violet-50 rounded-xl flex items-center justify-center shrink-0">
+                      <Target className="w-4 h-4 md:w-5 md:h-5 text-red-500" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="text-xs md:text-sm font-bold text-slate-800">
@@ -506,7 +506,7 @@ export default function LandingPage() {
 
             {/* Stats Cards - Hidden on mobile, visible on larger screens */}
             <div className="hidden animate-float md:block absolute top-20 right-[5%] z-20 space-y-4">
-              <div className="bg-[#1a1a1a] text-white p-4 sm:p-6 rounded-2xl sm:rounded-3xl shadow-2xl w-40 sm:w-48 transform -rotate-3 transition-transform hover:rotate-0">
+              <div className="bg-[#1a1a1a] text-white p-3 sm:p-4 rounded-2xl sm:rounded-3xl shadow-2xl w-40 sm:w-48 transform -rotate-3 transition-transform hover:rotate-0">
                 <div className="text-2xl sm:text-3xl font-bold mb-1">10M+</div>
                 <div className="text-xs sm:text-sm text-slate-400 leading-tight">
                   Messages
@@ -514,7 +514,7 @@ export default function LandingPage() {
                   Automated
                 </div>
               </div>
-              <div className="bg-[#1D63FF] text-white p-4 sm:p-6 rounded-2xl sm:rounded-3xl shadow-2xl w-40 sm:w-48 transform rotate-3 transition-transform hover:rotate-0">
+              <div className="bg-[#1D63FF] text-white p-3 sm:p-4 rounded-2xl sm:rounded-3xl shadow-2xl w-40 sm:w-48 transform rotate-3 transition-transform hover:rotate-0">
                 <div className="text-2xl sm:text-3xl font-bold mb-1">1.2K+</div>
                 <div className="text-xs sm:text-sm text-blue-100 leading-tight">
                   Happy

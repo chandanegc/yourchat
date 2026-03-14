@@ -6,7 +6,8 @@ import {
   MessageCircle, ChevronDown, Facebook, Globe, Instagram,
   LayoutDashboard, Zap, Users, BookOpen, Briefcase, Shield,
   Info, Phone, HelpCircle, Rss, Lock, Bot, ShoppingCart, Store,
-  Menu, X
+  Menu, X, Headphones, Megaphone, Building2, HeartPulse, Sparkles,
+  ArrowRight, Calendar
 } from 'lucide-react';
 
 const services = [
@@ -41,6 +42,49 @@ const services = [
     color: 'text-pink-600',
     bgColor: 'bg-pink-50',
     href: '/service/instagram',
+  },
+];
+
+const solutions = [
+  {
+    name: 'Sales',
+    icon: Bot,
+    href: '/solutions/sales',
+  },
+  {
+    name: 'Customer Support',
+    icon: Headphones,
+    href: '/solutions/customer-support',
+  },
+  {
+    name: 'eCommerce',
+    icon: ShoppingCart,
+    href: '/solutions/ecommerce',
+  },
+  {
+    name: 'Retail',
+    icon: Store,
+    href: '/solutions/retail',
+  },
+  {
+    name: 'Marketing',
+    icon: Megaphone,
+    href: '/solutions/marketing',
+  },
+  {
+    name: 'Education',
+    icon: BookOpen,
+    href: '/solutions/education',
+  },
+  {
+    name: 'Enterprise',
+    icon: Building2,
+    href: '/solutions/enterprise',
+  },
+  {
+    name: 'Healthcare',
+    icon: HeartPulse,
+    href: '/solutions/healthcare',
   },
 ];
 
@@ -139,18 +183,26 @@ const explore = [
     bgColor: 'bg-emerald-50',
     href: '/security',
   },
+  {
+    name: 'Appointment',
+    description: 'Book a personal demo or consultation',
+    icon: Calendar,
+    color: 'text-indigo-600',
+    bgColor: 'bg-indigo-50',
+    href: '/appointment',
+  },
 ];
 
 type DropdownItem = {
   name: string;
-  description: string;
+  description?: string;
   icon: React.ElementType;
-  color: string;
-  bgColor: string;
+  color?: string;
+  bgColor?: string;
   href: string;
 };
 
-function DropdownMenu({ items, isOpen, mobile = false }: { items: DropdownItem[]; isOpen: boolean; mobile?: boolean }) {
+function DropdownMenu({ items, solutions, isOpen, mobile = false }: { items: DropdownItem[]; solutions?: DropdownItem[]; isOpen: boolean; mobile?: boolean }) {
   if (mobile) {
     return (
       <div className="mt-2 space-y-1 pl-4">
@@ -160,15 +212,85 @@ function DropdownMenu({ items, isOpen, mobile = false }: { items: DropdownItem[]
             href={item.href}
             className="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-all group"
           >
-            <div className={`w-8 h-8 rounded-lg ${item.bgColor} flex items-center justify-center flex-shrink-0`}>
-              <item.icon className={`w-4 h-4 ${item.color}`} />
+            <div className={`w-8 h-8 rounded-lg ${item.bgColor || 'bg-slate-50'} flex items-center justify-center flex-shrink-0`}>
+              <item.icon className={`w-4 h-4 ${item.color || 'text-slate-600'}`} />
             </div>
             <div className="flex flex-col">
               <span className="text-sm font-bold text-slate-800">{item.name}</span>
-              <span className="text-xs text-slate-500">{item.description}</span>
+              {item.description && <span className="text-xs text-slate-500">{item.description}</span>}
             </div>
           </Link>
         ))}
+        {solutions && (
+           <div className="pt-2">
+           <div className="px-3 py-2 text-[10px] font-bold text-slate-400 uppercase tracking-wider">Solutions</div>
+           {solutions.map((item) => (
+             <Link
+               key={item.name}
+               href={item.href}
+               className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 transition-all group"
+             >
+               <item.icon className="w-4 h-4 text-slate-400" />
+               <span className="text-sm font-bold text-slate-800">{item.name}</span>
+             </Link>
+           ))}
+         </div>
+        )}
+      </div>
+    );
+  }
+
+  if (solutions) {
+    return (
+      <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[580px] bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden transition-all duration-300 transform origin-top z-[60] ${
+        isOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
+      }`}>
+        <div className="flex h-full min-h-[420px]">
+          {/* Left Panel */}
+          <div className="w-[280px] bg-slate-50/50 p-6 border-r border-slate-100 flex flex-col gap-2">
+            {items.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="flex items-start gap-4 p-3 rounded-xl hover:bg-white hover:shadow-sm transition-all group/item"
+              >
+                <div className={`w-10 h-10 rounded-lg ${item.bgColor} flex items-center justify-center flex-shrink-0 transition-transform group-hover/item:scale-110`}>
+                  <item.icon className={`w-5 h-5 ${item.color}`} />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-sm font-bold text-slate-800">{item.name}</span>
+                  <span className="text-[10px] text-slate-500 leading-tight">{item.description}</span>
+                </div>
+              </Link>
+            ))}
+            
+            <div className="mt-auto pt-4 border-t border-slate-200 px-2 text-center">
+               <Link href="/form" className="flex items-center justify-center gap-2 text-xs font-bold text-indigo-600 hover:text-indigo-700 transition-colors group/trial">
+                 Start a free 14-day trial
+                 <ArrowRight className="w-3 h-3 transition-transform group-hover/trial:translate-x-1" />
+               </Link>
+            </div>
+          </div>
+
+          {/* Right Panel (Solutions) */}
+          <div className="flex-1 p-6">
+            <div className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] mb-4">Solutions</div>
+            <div className="grid grid-cols-1 gap-1">
+              {solutions.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-all group/sol"
+                >
+                  <div className="w-8 h-8 flex items-center justify-center text-slate-400 group-hover/sol:text-indigo-600 transition-colors">
+                    <item.icon className="w-5 h-5" />
+                  </div>
+                  <span className="text-sm font-bold text-slate-800 group-hover/sol:text-indigo-600 transition-colors">{item.name}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
@@ -234,42 +356,52 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Placeholder to prevent content from hiding under the fixed navbar */}
-      <div className="h-[70px]  w-full shrink-0" aria-hidden="true" />
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        scrolled ? 'bg-white/80 backdrop-blur-xl shadow-lg' : 'bg-white border-b border-slate-50'
+      <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+        scrolled 
+          ? 'bg-white/70 backdrop-blur-lg shadow-[0_2px_20px_rgba(0,0,0,0.04)] border-b border-slate-200/50' 
+          : 'bg-white border-b border-slate-100'
       }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group cursor-pointer">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 relative">
-              <div className="absolute inset-0 flex items-center justify-center transform group-hover:rotate-6 transition-transform overflow-hidden">
-                <img src="/chat.png" alt="Logo" className="w-full h-full object-contain" />
+          <Link href="/" className="flex items-center gap-3 group cursor-pointer relative z-10">
+            <div className="w-10 h-10 sm:w-11 sm:h-11 relative">
+              <div className="absolute inset-0 bg-indigo-500 rounded-xl rotate-0 group-hover:rotate-12 transition-all duration-500 scale-100 opacity-0 group-hover:opacity-20 blur-md"></div>
+              <div className="relative inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500 bg-white rounded-xl shadow-sm border border-slate-100">
+                <img src="/chat.png" alt="Logo" className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
               </div>
             </div>
-            <span className="text-lg sm:text-xl font-bold tracking-tight text-slate-800">
-              Yoursitechat
-            </span>
+            <div className="flex flex-col">
+              <span className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 leading-none">
+                YourSiteChat
+              </span>
+              <div className="flex items-center gap-1.5 mt-1">
+                <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></span>
+                <span className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">
+                  AI Active
+                </span>
+              </div>
+            </div>
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center gap-4 xl:gap-8 text-sm font-medium text-slate-600">
+          <div className="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-bold text-slate-600">
             {['Services', 'Integrations', 'Company', 'Explore', 'Pricing'].map((item) => {
+              const isActive = openMenu === item;
               if (dropdowns[item]) {
                 const parentHref = item === 'Services' ? '/services' : item === 'Integrations' ? '/integrations' : '#';
                 return (
                   <div
                     key={item}
-                    className="relative py-2"
+                    className="relative px-4 py-2 transition-all duration-300 rounded-xl hover:bg-slate-50 group/nav"
                     onMouseEnter={() => setOpenMenu(item)}
                     onMouseLeave={() => setOpenMenu(null)}
                   >
-                    <Link href={parentHref} className="flex items-center gap-1 hover:text-indigo-600 transition-colors cursor-pointer whitespace-nowrap">
+                    <Link href={parentHref} className={`flex items-center gap-1.5 transition-colors cursor-pointer whitespace-nowrap ${isActive ? 'text-indigo-600' : 'group-hover/nav:text-indigo-600'}`}>
                       {item}
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${openMenu === item ? 'rotate-180' : ''}`} />
+                      <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-500 ${isActive ? 'rotate-180' : ''}`} />
                     </Link>
-                    <DropdownMenu items={dropdowns[item]} isOpen={openMenu === item} />
+                    <DropdownMenu items={dropdowns[item]} solutions={item === 'Services' ? solutions : undefined} isOpen={isActive} />
                   </div>
                 );
               }
@@ -278,10 +410,9 @@ export default function Navbar() {
                 <Link
                   key={item}
                   href={item === 'Pricing' ? '/pricing' : '#'}
-                  className="hover:text-indigo-600 transition-colors relative group whitespace-nowrap"
+                  className="px-4 py-2 transition-all relative group whitespace-nowrap hover:bg-slate-50 rounded-xl hover:text-indigo-600"
                 >
                   {item}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-600 transition-all group-hover:w-full"></span>
                 </Link>
               );
             })}
@@ -289,8 +420,15 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <Link href="/form" className="px-5 xl:px-6 py-2 xl:py-2.5 bg-gradient-to-r from-indigo-600 to-blue-500 text-white rounded-xl font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 text-sm xl:text-base whitespace-nowrap">
-              Get Started
+            <Link href="/login" className="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-all px-2">
+              Login
+            </Link>
+            <Link href="/form" className="group relative px-7 py-3 bg-indigo-600 text-white rounded-2xl font-bold overflow-hidden transition-all duration-500 hover:shadow-[0_10px_30px_rgba(79,70,229,0.3)] hover:scale-[1.03] active:scale-[0.97]">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <span className="relative z-10 text-sm xl:text-base tracking-wide flex items-center gap-2">
+                Get Started
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </span>
             </Link>
           </div>
 
@@ -327,7 +465,7 @@ export default function Navbar() {
                       }`} />
                     </button>
                     {mobileDropdownOpen === item && (
-                      <DropdownMenu items={dropdowns[item]} isOpen={true} mobile={true} />
+                      <DropdownMenu items={dropdowns[item]} solutions={item === 'Services' ? solutions : undefined} isOpen={true} mobile={true} />
                     )}
                   </div>
                 );
