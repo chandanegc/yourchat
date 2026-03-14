@@ -54,33 +54,33 @@ export default function EcommerceSolution() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-42 pb-24 px-6 bg-white relative overflow-hidden">
+      <section className="pt-16 pb-12 px-6 bg-white relative overflow-hidden min-h-[calc(100vh-70px)] flex items-center">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-slate-50 skew-x-[15deg] translate-x-1/2"></div>
-        <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-24 items-center">
-           <div className="space-y-10 group cursor-pointer">
+        <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+           <div className="space-y-6 group cursor-pointer">
               <div className="inline-flex items-center gap-3 px-6 py-2 bg-slate-100 text-slate-900 rounded-full font-black uppercase tracking-widest text-[10px] shadow-sm transform group-hover:scale-105 transition-transform">
                  <ShoppingBag className="w-4 h-4" />
                  <span>The E-commerce Solution</span>
               </div>
               
-              <h1 className="text-5xl md:text-8xl font-black text-slate-900 tracking-tighter leading-[0.9]">
+              <h1 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter leading-[0.9]">
                 Turn chats <br /><span className="text-blue-600">into checkouts.</span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-slate-500 font-medium max-w-2xl leading-relaxed">
+              <p className="text-lg md:text-xl text-slate-500 font-medium max-w-2xl leading-relaxed">
                 Unlock the power of conversational commerce. From personalized styling advice to automated order updates, your store is always open.
               </p>
 
-              <div className="flex flex-wrap gap-6 pt-4">
-                 <button className="px-12 py-6 bg-slate-900 text-white rounded-2xl font-black shadow-2xl transition-all hover:scale-105 active:scale-95 flex items-center gap-3">
-                   Scale My Store <ArrowRight className="w-6 h-6 text-blue-600" />
+              <div className="flex flex-wrap gap-4 pt-2">
+                 <button className="px-8 py-4 bg-slate-900 text-white rounded-2xl font-black shadow-2xl transition-all hover:scale-105 active:scale-95 flex items-center gap-3 text-sm">
+                   Scale My Store <ArrowRight className="w-5 h-5 text-blue-600" />
                  </button>
-                 <a href="https://www.youtube.com/watch?v=hXjR8C3rRoA" target="_blank" rel="noopener noreferrer" className="px-12 py-6 bg-white text-slate-900 border-2 border-slate-100 rounded-2xl font-black transition-all hover:bg-slate-50 inline-flex items-center justify-center">
-                   Watch Demo Video
+                 <a href="https://www.youtube.com/watch?v=hXjR8C3rRoA" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white text-slate-900 border-2 border-slate-100 rounded-2xl font-black transition-all hover:bg-slate-50 inline-flex items-center justify-center text-sm">
+                   Watch Demo
                  </a>
               </div>
               
-              <div className="pt-10 flex items-center gap-8 border-t border-slate-100">
+              <div className="pt-6 flex items-center gap-8 border-t border-slate-100">
                  <div className="space-y-1">
                     <p className="text-3xl font-black text-slate-900">4x</p>
                     <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Higher Conversion</p>

@@ -58,33 +58,33 @@ export default function EnterpriseSolution() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-42 pb-24 px-6 bg-slate-900 relative overflow-hidden">
+      <section className="pt-16 pb-12 px-6 bg-slate-900 relative overflow-hidden min-h-[calc(100vh-70px)] flex items-center">
         <div className="absolute inset-0 opacity-20">
            <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
              <path d="M0,0 L100,100 M100,0 L0,100" stroke="white" strokeWidth="0.1" />
            </svg>
         </div>
         
-        <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-24 items-center">
-           <div className="space-y-12">
+        <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+           <div className="space-y-8">
               <div className="inline-flex items-center gap-3 px-6 py-2 bg-blue-600 text-white rounded-full font-black uppercase tracking-widest text-[10px] shadow-2xl">
                  <Building2 className="w-4 h-4 shadow-xl shadow-blue-500/50" />
                  <span>The Enterprise Solution</span>
               </div>
               
-              <h1 className="text-5xl md:text-8xl font-black text-white tracking-tighter leading-[0.9]">
+              <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-[0.9]">
                 The AI platform for <br /><span className="text-blue-500">Global Enterprises.</span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-slate-400 font-medium max-w-2xl leading-relaxed">
+              <p className="text-lg md:text-xl text-slate-400 font-medium max-w-2xl leading-relaxed">
                 Scale your customer engagement with confidence. Secure, compliant, and deeply integrated into your existing enterprise stack.
               </p>
 
-              <div className="flex flex-wrap gap-8 pt-6">
-                 <a href="https://www.youtube.com/watch?v=hXjR8C3rRoA" target="_blank" rel="noopener noreferrer" className="px-12 py-6 bg-blue-600 text-white rounded-2xl font-black shadow-2xl transition-all hover:scale-105 active:scale-95 flex items-center gap-3 w-fit">
-                   Request Custom Demo <ArrowRight className="w-6 h-6" />
+              <div className="flex flex-wrap gap-6 pt-4">
+                 <a href="https://www.youtube.com/watch?v=hXjR8C3rRoA" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-blue-600 text-white rounded-2xl font-black shadow-2xl transition-all hover:scale-105 active:scale-95 flex items-center gap-3 w-fit text-sm">
+                   Request Custom Demo <ArrowRight className="w-5 h-5" />
                  </a>
-                 <button className="px-12 py-6 bg-white/5 text-white border border-white/20 rounded-2xl font-black backdrop-blur-md transition-all hover:bg-white/10">
+                 <button className="px-8 py-4 bg-white/5 text-white border border-white/20 rounded-2xl font-black backdrop-blur-md transition-all hover:bg-white/10 text-sm">
                    Contact Sales Team
                  </button>
               </div>

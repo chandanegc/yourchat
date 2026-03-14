@@ -59,32 +59,32 @@ export default function SaasSolution() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-42 pb-24 px-6 bg-slate-900 relative overflow-hidden">
+      <section className="pt-16 pb-12 px-6 bg-slate-900 relative overflow-hidden min-h-[calc(100vh-70px)] flex items-center">
         <div className="absolute top-0 right-0 w-2/3 h-full bg-blue-600/10 skew-x-[-30deg] translate-x-1/2"></div>
-        <div className="max-w-7xl mx-auto relative z-10 space-y-12 text-center">
+        <div className="max-w-7xl mx-auto relative z-10 space-y-8 text-center pt-8">
           <div className="inline-flex items-center gap-2 px-6 py-2 bg-blue-600 text-white rounded-full font-black uppercase tracking-widest text-xs shadow-2xl">
              <Rocket className="w-4 h-4 animate-bounce" />
              <span>The Saas & Startups Solution</span>
           </div>
           
-          <h1 className="text-5xl md:text-8xl font-black text-white tracking-tighter leading-[0.9]">
+          <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-[0.9]">
             Scale your <br /><span className="text-blue-500">Startup</span> with AI.
           </h1>
           
-          <p className="text-xl md:text-2xl text-slate-400 font-medium max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-400 font-medium max-w-3xl mx-auto leading-relaxed">
             From zero to thousands of users. Manage support and sales without the hiring headache. Built for fast-moving SaaS teams.
           </p>
 
-          <div className="flex flex-wrap gap-6 pt-6 justify-center">
-             <button className="px-12 py-6 bg-white text-slate-900 rounded-2xl font-black shadow-2xl transition-all hover:scale-110 active:scale-95 flex items-center gap-3">
-               Start For Free <ArrowRight className="w-6 h-6 text-blue-600" />
+          <div className="flex flex-wrap gap-4 pt-4 justify-center">
+             <button className="px-8 py-4 bg-white text-slate-900 rounded-2xl font-black shadow-2xl transition-all hover:scale-110 active:scale-95 flex items-center gap-3 text-sm">
+               Start For Free <ArrowRight className="w-5 h-5 text-blue-600" />
              </button>
-             <a href="https://www.youtube.com/watch?v=hXjR8C3rRoA" target="_blank" rel="noopener noreferrer" className="px-12 py-6 bg-white/5 text-white border border-white/20 rounded-2xl font-black backdrop-blur-md transition-all hover:bg-white/10 hover:border-white/40 inline-flex items-center justify-center">
+             <a href="https://www.youtube.com/watch?v=hXjR8C3rRoA" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white/5 text-white border border-white/20 rounded-2xl font-black backdrop-blur-md transition-all hover:bg-white/10 hover:border-white/40 inline-flex items-center justify-center text-sm">
                Book Founder Demo
              </a>
           </div>
           
-          <div className="pt-16 grid grid-cols-2 md:grid-cols-4 gap-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
+          <div className="pt-12 grid grid-cols-2 md:grid-cols-4 gap-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
              {["SaaS", "Fintech", "EdTech", "MarTech"].map(t => (
                <div key={t} className="flex flex-col items-center gap-2">
                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
