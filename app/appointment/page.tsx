@@ -21,12 +21,13 @@ export default function AppointmentPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden">
+    <div className="min-h-screen bg-white">
       <Navbar />
       
-      <main className="relative z-10 overflow-hidden -mt-[70px]">
+      <main className="relative z-10 overflow-hidden">
+        
         {/* Hero Section with Advanced Background */}
-        <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden pt-[70px]">
+        <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
           {/* Advanced Animated Background */}
           <div className="absolute inset-0">
             {/* Base gradient */}
@@ -58,26 +59,26 @@ export default function AppointmentPage() {
             }}></div>
           </div>
 
-          <div className="max-w-7xl mx-auto relative z-10 py-20">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="max-w-7xl mx-auto relative z-10 py-10 lg:py-6">
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
               
               {/* Left Content */}
-              <div className={`space-y-8 text-white transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}>
+              <div className={`space-y-6 text-white transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}>
                 {/* Premium Badge */}
-                <div className="inline-flex items-center gap-3 px-5 py-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full shadow-lg">
-                  <Crown className="w-5 h-5 text-yellow-400" />
-                  <span className="text-sm font-bold">VIP Strategy Session</span>
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full shadow-lg">
+                  <Crown className="w-4 h-4 text-yellow-400" />
+                  <span className="text-xs font-bold">VIP Strategy Session</span>
                 </div>
                 
-                <div className="space-y-6">
-                  <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight">
+                <div className="space-y-4">
+                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight">
                     Transform Your Business With
-                    <span className="block mt-2 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+                    <span className="block mt-1 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
                       AI-Powered Support
                     </span>
                   </h1>
                   
-                  <p className="text-xl text-gray-300 leading-relaxed max-w-xl">
+                  <p className="text-lg text-gray-300 leading-relaxed max-w-xl">
                     Get a personalized strategy session with our AI experts. Discover how to automate 80% of customer queries and boost conversions instantly.
                   </p>
                 </div>
@@ -131,51 +132,51 @@ export default function AppointmentPage() {
                 <div className="absolute -inset-6 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 rounded-[3rem] blur-3xl opacity-40 animate-pulse"></div>
                 
                 {/* Main card */}
-                <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
+                <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden max-w-md mx-auto">
                   {/* Top accent bar */}
-                  <div className="h-2 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600"></div>
+                  <div className="h-1.5 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600"></div>
                   
-                  <div className="p-8 space-y-8">
+                  <div className="p-6 lg:p-7 space-y-6">
                     {/* Header */}
-                    <div className="text-center space-y-4">
-                      <div className="w-20 h-20 mx-auto bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center shadow-xl transform -rotate-3 hover:rotate-0 transition-transform">
-                        <Calendar className="w-10 h-10 text-white" />
+                    <div className="text-center space-y-3">
+                      <div className="w-16 h-16 mx-auto bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center shadow-xl transform -rotate-3 hover:rotate-0 transition-transform">
+                        <Calendar className="w-8 h-8 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-3xl font-black text-gray-900 mb-2">Book Your Slot</h3>
-                        <p className="text-gray-600 font-semibold">Limited availability • First come, first served</p>
+                        <h3 className="text-2xl font-black text-gray-900 mb-1">Book Your Slot</h3>
+                        <p className="text-gray-600 font-semibold text-xs">Limited availability • First come, first served</p>
                       </div>
                     </div>
                     
                     {/* Details Cards */}
-                    <div className="space-y-3">
-                      <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl border-2 border-purple-200">
-                        <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
-                          <Clock className="w-6 h-6 text-white" />
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl border border-purple-100">
+                        <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center shadow-md">
+                          <Clock className="w-5 h-5 text-white" />
                         </div>
                         <div>
-                          <p className="text-xs text-gray-500 font-bold uppercase">Duration</p>
-                          <p className="text-lg font-black text-gray-900">15 Minutes</p>
+                          <p className="text-[10px] text-gray-500 font-bold uppercase">Duration</p>
+                          <p className="text-base font-black text-gray-900 leading-none">15 Minutes</p>
                         </div>
                       </div>
                       
-                      <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl border-2 border-blue-200">
-                        <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center shadow-lg">
-                          <Video className="w-6 h-6 text-white" />
+                      <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border border-blue-100">
+                        <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center shadow-md">
+                          <Video className="w-5 h-5 text-white" />
                         </div>
                         <div>
-                          <p className="text-xs text-gray-500 font-bold uppercase">Platform</p>
-                          <p className="text-lg font-black text-gray-900">Google Meet</p>
+                          <p className="text-[10px] text-gray-500 font-bold uppercase">Platform</p>
+                          <p className="text-base font-black text-gray-900 leading-none">Google Meet</p>
                         </div>
                       </div>
 
-                      <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl border-2 border-pink-200">
-                        <div className="w-12 h-12 bg-gradient-to-br from-pink-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
-                          <Headphones className="w-6 h-6 text-white" />
+                      <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-pink-50 to-purple-50 rounded-xl border border-pink-100">
+                        <div className="w-10 h-10 bg-gradient-to-br from-pink-600 to-purple-600 rounded-lg flex items-center justify-center shadow-md">
+                          <Headphones className="w-5 h-5 text-white" />
                         </div>
                         <div>
-                          <p className="text-xs text-gray-500 font-bold uppercase">Expert</p>
-                          <p className="text-lg font-black text-gray-900">AI Specialist</p>
+                          <p className="text-[10px] text-gray-500 font-bold uppercase">Expert</p>
+                          <p className="text-base font-black text-gray-900 leading-none">AI Specialist</p>
                         </div>
                       </div>
                     </div>
@@ -185,7 +186,7 @@ export default function AppointmentPage() {
                       href={demoUrl} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="group relative w-full py-5 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 text-white rounded-2xl font-black text-xl hover:shadow-2xl hover:shadow-purple-500/50 transition-all flex items-center justify-center gap-3 overflow-hidden"
+                      className="group relative w-full py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 text-white rounded-xl font-black text-lg hover:shadow-2xl hover:shadow-purple-500/50 transition-all flex items-center justify-center gap-3 overflow-hidden"
                     >
                       {/* Shimmer effect */}
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>

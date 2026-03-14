@@ -7,7 +7,7 @@ import {
   LayoutDashboard, Zap, Users, BookOpen, Briefcase, Shield,
   Info, Phone, HelpCircle, Rss, Lock, Bot, ShoppingCart, Store,
   Menu, X, Headphones, Megaphone, Building2, HeartPulse, Sparkles,
-  ArrowRight, Calendar
+  ArrowRight, Calendar, Rocket
 } from 'lucide-react';
 
 const services = [
@@ -85,6 +85,11 @@ const solutions = [
     name: 'Healthcare',
     icon: HeartPulse,
     href: '/solutions/healthcare',
+  },
+  {
+    name: 'SaaS',
+    icon: Rocket,
+    href: '/solutions/saas',
   },
 ];
 
@@ -356,6 +361,8 @@ export default function Navbar() {
 
   return (
     <>
+      {/* Placeholder to prevent content from hiding under the fixed navbar */}
+      <div className="h-[70px]  w-full shrink-0" aria-hidden="true" />
       <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         scrolled 
           ? 'bg-white/70 backdrop-blur-lg shadow-[0_2px_20px_rgba(0,0,0,0.04)] border-b border-slate-200/50' 
@@ -420,9 +427,9 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <Link href="/login" className="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-all px-2">
+            <a href="https://www.yoursitechat.com/login" className="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-all px-2">
               Login
-            </Link>
+            </a>
             <Link href="/form" className="group relative px-7 py-3 bg-indigo-600 text-white rounded-2xl font-bold overflow-hidden transition-all duration-500 hover:shadow-[0_10px_30px_rgba(79,70,229,0.3)] hover:scale-[1.03] active:scale-[0.97]">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <span className="relative z-10 text-sm xl:text-base tracking-wide flex items-center gap-2">
@@ -484,7 +491,14 @@ export default function Navbar() {
             })}
 
             {/* Mobile CTA */}
-            <div className="pt-4">
+            <div className="pt-4 space-y-3">
+              <a
+                href="https://www.yoursitechat.com/login"
+                className="block w-full px-6 py-3 bg-slate-50 text-slate-700 rounded-xl font-semibold text-center border border-slate-200"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Login
+              </a>
               <Link
                 href="/form"
                 className="block w-full px-6 py-3 bg-gradient-to-r from-indigo-600 to-blue-500 text-white rounded-xl font-semibold text-center hover:shadow-xl transition-all duration-300"
